@@ -2,7 +2,8 @@
   <h2 @click="changeMessage">
     {{ msg }}
   </h2>
-  <img src="http://jjgodcom.com/resources/images/global/logo.png" alt="JJGODCOM" >
+  <!-- <img src="../assets/logo.png" alt="JJGODCOM" > -->
+  <img src="https://raw.githubusercontent.com/jjgodcom/jjgodcom.com/master/resources/images/global/logo.png" alt="JJGODCOM" >
 </template>
 
 <script>
