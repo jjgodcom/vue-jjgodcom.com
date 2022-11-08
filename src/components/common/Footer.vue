@@ -15,6 +15,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '~/scss/var.scss';
 
 footer {
   width: 100%;
@@ -23,5 +24,6 @@ footer {
   font-size: 14px;
   text-align: center;
   border-top: 1px solid #ccc;
+  font-family: $font--NotoSans;
 }
 </style>
