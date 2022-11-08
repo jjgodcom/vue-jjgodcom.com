@@ -19,7 +19,7 @@
       <!-- icon -->
       <ul class="icon">
         <li>
-          <a href="#e">
+          <a href="https://github.com/jjgodcom" target="_blank">
             <svg width="24px" height="24px" viewBox="0 0 438.549 438.549">
               <path fill="#757474" d="M409.132,114.573c-19.608-33.596-46.205-60.194-79.798-79.8C295.736,15.166,259.057,5.365,219.271,5.365
               c-39.781,0-76.472,9.804-110.063,29.408c-33.596,19.605-60.192,46.204-79.8,79.8C9.803,148.168,0,184.854,0,224.63
@@ -46,7 +46,7 @@
           </a>
         </li>
         <li>
-          <a href="#e">
+          <a href="https://open.kakao.com/o/sY85ECMe" target="_blank">
             <svg 
             width="30" 
             height="30">
