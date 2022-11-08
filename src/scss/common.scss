@@ -1,0 +1,48 @@
+// $color--black: #000;
+// $color--white: #fff;
+
+// body {
+//   background-color: $color--black;
+//   h1 {
+//     color: $color--white;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//   }
+// }
+@media (max-width: 1920px){
+  .container {
+    max-width: 1634px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 1680px){
+  .container {
+    max-width: 1400px;
+  }
+}
+@media (max-width: 1440px){
+  .container {
+    max-width: 1157px;
+  }
+}
+@media (max-width: 1366px){
+  .container {
+    max-width: 1085px;
+  }
+}
+@media (max-width: 1204px){
+  .container {
+    max-width: 744px;
+  }
+}
+@media (max-width: 890px){
+  .container {
+    max-width: 730px;
+  }
+}
+@media (max-width: 550px){
+  .container {
+    max-width: 462px;
+  }
+}
