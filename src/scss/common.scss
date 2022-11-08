@@ -1,15 +1,9 @@
-// $color--black: #000;
-// $color--white: #fff;
+@import '~/scss/var.scss';
 
-// body {
-//   background-color: $color--black;
-//   h1 {
-//     color: $color--white;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//   }
-// }
+* {
+  font-family: $font--NotoSans;
+}
+
 @media (max-width: 1920px){
   .container {
     max-width: 1634px;
