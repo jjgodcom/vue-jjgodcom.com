@@ -2,7 +2,13 @@
   <header>
     <!-- logo -->
     <RouterLink to="/" class="logo">
-      <img src="~/assets/common/logo.png" alt="logo" title="logo">
+      <div
+        :class="{active : isHover}"
+        @mouseover="hover"
+        @mouseleave="hover">
+      </div>
+      <!-- <img src="~/assets/common/logo.png" alt="logo" title="logo">
+      <img src="~/assets/common/logo_hover_2.png" alt="logo" title="logo"> -->
     </RouterLink>
     <!-- //logo -->
     <div class="container">
@@ -63,6 +69,26 @@
   </header>
 </template>
 
+<script>
+export default {
+  data(){
+    return{
+      isHover: false
+    }
+  },
+  watch:{
+    isHover(value){
+      console.log(value);
+    }
+  },
+  methods:{
+    hover(){
+      this.isHover = !this.isHover
+    }
+  }
+}
+</script>
+
 <style lang="scss" scoped>
 @import '~/scss/var.scss';
 
@@ -76,8 +102,16 @@ header {
     top: 50%;
     left: 25px;
     transform: translateY(-50%);
-    img {
+    div {
       width: 50px;
+      height: 50px;
+      background-image: url('../../assets/common/logo.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      transition: 0.3s;
+      &.active {
+        background-image: url('../../assets/common/logo_hover_2.png');
+      }
     }
   }
   .container {
@@ -192,44 +226,6 @@ header {
             }
           }
         }
-
-        // a {
-        //   position: relative;
-        //   &::before,
-        //   &::after {
-        //     position: absolute;
-        //     left:50%;
-        //     transform: translateX(-50%);
-        //     opacity: 0;
-        //   }
-        //   &::before {
-        //     content: "";
-        //     bottom: -10px;
-        //     border: 5px solid transparent;
-        //   }
-        //   &::after {
-        //     bottom: -40px;
-        //     padding: 0.5rem 0.75rem;
-        //     color: #333;
-        //     font-size: 14px;
-        //     border-radius: 3px;
-        //     color:#fff;
-        //   }
-        // }
-        // &:first-child a::before {
-        //   border-bottom-color: #e94e32;
-        // }
-        // &:first-child a::after {
-        //   content:'GitHub';
-        //   background-color: #e94e32;
-        // }
-        // &:last-child a::before {
-        //   border-bottom-color: #ffc723;
-        // }
-        // &:last-child a::after {
-        //   content:'KakaoTalk';
-        //   background-color: #ffc723;
-        // }
       }
       svg {
         width: 24px;
