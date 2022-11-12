@@ -2,7 +2,7 @@
   <h2 @click="changeMessage">
     {{ msg }}
   </h2>
-  <!-- <img src="../assets/logo.png" alt="JJGODCOM" > -->
+  <!-- <img src="../assets/common/logo.png" alt="JJGODCOM" > -->
   <img src="https://raw.githubusercontent.com/jjgodcom/jjgodcom.com/master/resources/images/global/logo.png" alt="JJGODCOM" >
 
   <div class="container">

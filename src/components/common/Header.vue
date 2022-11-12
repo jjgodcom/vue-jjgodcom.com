@@ -2,7 +2,7 @@
   <header>
     <!-- logo -->
     <RouterLink to="/" class="logo">
-      <img src="~/assets/logo.png" alt="logo" title="logo">
+      <img src="~/assets/common/logo.png" alt="logo" title="logo">
     </RouterLink>
     <!-- //logo -->
     <div class="container">
