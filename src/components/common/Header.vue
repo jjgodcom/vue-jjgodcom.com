@@ -1,15 +1,18 @@
 <template>
   <header>
     <!-- logo -->
-    <RouterLink to="/" class="logo">
-      <div
-        :class="{active : isHover}"
-        @mouseover="hover"
-        @mouseleave="hover">
-      </div>
-      <!-- <img src="~/assets/common/logo.png" alt="logo" title="logo">
-      <img src="~/assets/common/logo_hover_2.png" alt="logo" title="logo"> -->
-    </RouterLink>
+    <div class="logo">
+      <RouterLink to="/">
+        <div class="logo-image"
+          :class="{active : isHover}"
+          @mouseover="hover"
+          @mouseleave="hover">
+        </div>
+        <!-- <img src="~/assets/common/logo.png" alt="logo" title="logo">
+        <img src="~/assets/common/logo_hover_2.png" alt="logo" title="logo"> -->
+      </RouterLink>
+      <div class="logo-text">Hi~ I am Suho,park :) 💦</div>
+    </div>
     <!-- //logo -->
     <div class="container">
       <!-- menu -->
@@ -102,7 +105,7 @@ header {
     top: 50%;
     left: 25px;
     transform: translateY(-50%);
-    div {
+    &-image {
       width: 50px;
       height: 50px;
       background-image: url('../../assets/common/logo.png');
@@ -112,6 +115,17 @@ header {
       &.active {
         background-image: url('../../assets/common/logo_hover_2.png');
       }
+    }
+    &-text {
+      width: 220px;
+      position: absolute;
+      bottom: -100px;
+      left: 25px;
+      transform: rotate(90deg);
+      transform-origin: left center;
+      font-family: $font--Russo;
+      font-size: 17px;
+      color:#191919;
     }
   }
   .container {
