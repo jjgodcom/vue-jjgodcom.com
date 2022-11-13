@@ -99,7 +99,9 @@ header {
   display: flex;
   align-items: center;
   height: 106px;
-  position: relative;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
   .logo {
     position: absolute;
     top: 50%;

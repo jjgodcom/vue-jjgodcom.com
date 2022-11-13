@@ -1,14 +1,16 @@
 <template>
-  <h1>Home!</h1>
+  <Title></Title>
   <HelloWorld />
 </template>
 
 <script>
 import HelloWorld from '~/components/HelloWorld'
+import Title from '~/components/home/Title'
 
 export default {
   components: {
-    HelloWorld
+    HelloWorld,
+    Title
   }
 }
 </script>
