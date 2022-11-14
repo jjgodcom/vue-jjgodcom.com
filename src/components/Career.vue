@@ -7,7 +7,7 @@
           <img src="../assets/common/logo.png" />
         </template>
         <template v-slot:preloader> 
-          <img src="https://flevix.com/wp-content/uploads/2019/07/Untitled-2.gif" />
+          <img src="https://raw.githubusercontent.com/jjgodcom/vue-jjgodcom.com/f5efd8614f20f46d1a6655aab749e2c7e5fb2b02/src/assets/common/loading.gif" />
         </template>
         <template v-slot:error> image load fails </template>
       </vue-load-image>
