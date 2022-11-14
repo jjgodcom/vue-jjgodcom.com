@@ -44,6 +44,7 @@
     "vue": "^3.2.36",
     "vue-load-image": "^1.1.0",
     "vue-router": "^4.0.5",
+    "vue-typer": "^1.2.0",
     "vuex": "^4.0.0"
   }
 }
