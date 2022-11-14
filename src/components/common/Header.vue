@@ -17,11 +17,13 @@
     <div class="container">
       <!-- menu -->
       <ul class="menu">
-        <li>
-          <RouterLink to="/about">About</RouterLink>
-        </li>
-        <li>
-          <RouterLink to="/work">Work</RouterLink>
+        <li
+          v-for="nav in navigations"
+          :key="nav.name">
+          <RouterLink 
+            :to="nav.href">
+            {{nav.name}}
+          </RouterLink>
         </li>
       </ul>
       <!-- //menu -->
@@ -76,7 +78,21 @@
 export default {
   data(){
     return{
-      isHover: false
+      isHover: false,
+      navigations:[
+        {
+          name:'About',
+          href:'/about'
+        },
+        {
+          name:'Work',
+          href:'/work'
+        },
+        {
+          name:'NotFound',
+          href:'/123'
+        }
+      ]
     }
   },
   watch:{
@@ -148,7 +164,8 @@ header {
         a {
           text-decoration: none;
           color:#333;
-          &:hover{
+          &:hover,
+          &.router-link-active{
             transition: all 600s ease;
             color: #df405a;
             background-color: #df405a;
