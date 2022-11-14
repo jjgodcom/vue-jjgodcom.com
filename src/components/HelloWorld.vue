@@ -9,7 +9,7 @@
   <div class="container">
     <h1>컨테이너 테스트</h1>
     <!-- <button @click="changeImageURL">change image</button> -->
-    <!-- <vue-load-image>
+    <vue-load-image>
       <template v-slot:image>
         <img :src="src" />
       </template>
@@ -17,7 +17,7 @@
         <img src="https://raw.githubusercontent.com/john015/vue-load-image/master/example/image-loader.gif" />
       </template>
       <template v-slot:error> image load fails </template>
-    </vue-load-image> -->
+    </vue-load-image>
   </div>
 
 </template>

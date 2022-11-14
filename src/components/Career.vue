@@ -1,11 +1,51 @@
 <template>
   <div class="container">
-    <h2>Carrea</h2>
+    <!-- photo -->
+    <div class="photo">
+      <vue-load-image>
+        <template v-slot:image>
+          <img src="../assets/common/logo.png" />
+        </template>
+        <template v-slot:preloader> 
+          <img src="https://flevix.com/wp-content/uploads/2019/07/Untitled-2.gif" />
+        </template>
+        <template v-slot:error> image load fails </template>
+      </vue-load-image>
+    </div>
+    <!-- /photo -->
+    
+
+    <div>I am</div>
+    <div>Skills</div>
   </div>
 </template>
 
+<script>
+import VueLoadImage from 'vue-load-image'
+
+export default {
+  components: {
+    'vue-load-image': VueLoadImage
+  },
+}
+</script>
+
 <style lang="scss" scoped>
 .container {
-  padding-top: 100px;
+  padding: 100px 0;
+}
+.photo{
+  width: 250px;
+  height: 250px;
+  margin: 40px auto 20px;
+  padding: 30px;
+  border: 10px solid #dee2e6;
+  border-radius: 50%;
+  box-sizing: border-box;
+  background-color: #e9ecef;
+  position: relative;
+  img{
+    width: 100%;
+  }
 }
 </style>
