@@ -1,0 +1,27 @@
+<template>
+  <div class="container">
+    <Iam></Iam>
+    <Photo></Photo>
+    <Skills></Skills>
+  </div>
+</template>
+
+<script>
+import Iam from '~/components/about/Iam'
+import Photo from '~/components/about/Photo'
+import Skills from '~/components/about/Skills'
+
+export default {
+  components: {
+    Iam,
+    Photo,
+    Skills
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+.container {
+  padding: 100px 0;
+}
+</style>

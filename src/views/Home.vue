@@ -1,19 +1,19 @@
 <template>
   <Title></Title>
-  <Career></Career>
+  <About></About>
   <HelloWorld />
 </template>
 
 <script>
 import HelloWorld from '~/components/HelloWorld'
 import Title from '~/components/home/Title'
-import Career from '~/components/Career'
+import About from '~/components/home/About'
 
 export default {
   components: {
     HelloWorld,
     Title,
-    Career
+    About
   }
 }
 </script>
