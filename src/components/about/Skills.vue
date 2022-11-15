@@ -1,7 +1,7 @@
 <template>
   <!-- Skills -->
   <div class="skills">
-    <p class="title">Skills :</p>
+    <p class="title">Skills & Tools :</p>
     <ul>
       <li 
         v-for="item in skiils" 
@@ -27,6 +27,7 @@ export default {
         'HTML5',
         'JavaScript',
         'jQuery',
+        'BootStrap',
         'Node.js',
         'Vue.js',
         'DB',
@@ -36,6 +37,11 @@ export default {
         'Bundler',
         'Parcel',
         'Webpack',
+        'Spring',
+        'VSCode',
+        'Eclipse',
+        'Adobe Photoshop',
+        'Adobe Illustrator'
       ],
       number:0
     }
@@ -65,6 +71,7 @@ export default {
 <style lang="scss" scoped>
 @import '~/scss/var.scss';
 .skills {
+  padding: 70px 0;
   .title {
     font-family: $font--Russo;
     margin-bottom: 40px;

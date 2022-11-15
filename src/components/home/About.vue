@@ -1,7 +1,7 @@
 <template>
   <div class="container">
-    <Iam></Iam>
     <Photo></Photo>
+    <Iam></Iam>
     <Skills></Skills>
   </div>
 </template>

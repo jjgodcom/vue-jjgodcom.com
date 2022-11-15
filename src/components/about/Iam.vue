@@ -19,6 +19,8 @@
 <style lang="scss" scoped>
 @import '~/scss/var.scss';
 .iAm {
+  padding: 70px 0;
+  border-bottom: 1px solid #ddd;
   .title {
     font-family: $font--Russo;
     margin-bottom: 40px;
