@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <p>🐢 Copyright {{year}}. Web Front-end developer Suho-Park 🐢</p>
+    <p><span>🐢</span> Copyright {{year}}. Web Front-end developer Suho-Park 🐢</p>
   </footer>
 </template>
 
@@ -25,5 +25,11 @@ footer {
   text-align: center;
   border-top: 1px solid #ccc;
   font-family: $font--NotoSans;
+  p {
+    span {
+      display: inline-block;
+      transform: scaleX(-1);
+    }
+  }
 }
 </style>

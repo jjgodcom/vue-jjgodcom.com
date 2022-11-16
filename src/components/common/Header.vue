@@ -170,19 +170,7 @@ header {
           color:#333;
           &:hover,
           &.router-link-active{
-            transition: all 600s ease;
-            color: #df405a;
-            background-color: #df405a;
-            background: -webkit-linear-gradient(left,#df405a 20%,#87314e,#512645,#87314e);
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: menu-hover-effect 2s ease-in-out infinite forwards;
-          }
-          @keyframes menu-hover-effect {
-            50% {
-              background-clip: text;
-              background-position: -60px;
-            }
+            @include textGradient;
           }
         }
       }
