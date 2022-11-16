@@ -5,6 +5,7 @@ import Work from '~/views/Work'
 import Portfolio from '~/views/Portfolio'
 import Note from '~/views/Note'
 import NotFound from '~/views/NotFound'
+import Test from '~/views/Test'
 
 export default createRouter({
   history: createWebHashHistory(),
@@ -35,6 +36,10 @@ export default createRouter({
     {
       path: '/:notFound(.*)',
       component: NotFound
+    },
+    {
+      path: '/test',
+      component: Test
     }
   ]
 })

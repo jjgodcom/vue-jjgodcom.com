@@ -91,6 +91,10 @@ export default {
         {
           name:'NotFound',
           href:'/123'
+        },
+        {
+          name:'Test',
+          href:'/test'
         }
       ]
     }
