@@ -13,25 +13,39 @@
       <!-- menu -->
       <ul class="menu">
         <li 
-          :class="{ active: index === isActive}"
-          v-for="(menu, index) in menus" 
-          :key="index"
-          @click="selectItem(index)">
+          :class="{ active: menu === isActive}"
+          v-for="menu in menus" 
+          :key="menu"
+          @click="filter($event,menu)">
           {{menu}}
         </li>
       </ul>
       <!-- /menu -->
       <!-- list -->
-      <div class="list">
-        <div
-          class="list-item" 
-          v-for="list in lists"
-          :key="list.title">
-          {{list.title}}
-          {{list.type}}
-        </div>
-      </div>
+      <!-- <div class="list">
+        <transition name="list-item-fade" mode="out-in">
+          <template
+            v-for="list in lists"
+            :key="list.title">
+              <div class="list-item" v-if="true">All 일경우 싹다 출력 해야함</div>
+              <div class="list-item" v-else-if="list.type === isActive">
+                제목 : {{list.title}} <br>
+                타입 : {{list.type}}
+              </div>
+          </template>
+        </transition>
+      </div> -->
       <!-- /list -->
+      <div class="list">
+          <template v-for="list in lists" :key="list.title">
+            <transition name="list-item-fade" mode="out-in">
+              <div class="list-item" v-if="list.type === isActive">All 일경우 싹다 출력 해야함
+                제목 : {{list.title}} <br>
+                타입 : {{list.type}}
+              </div>
+            </transition>
+          </template>
+      </div>
     </div>
   </div>
 </template>
@@ -51,27 +65,58 @@ export default {
         'PORTFOLIO',
         'OTHER'
       ],
+      isActive: false,
       lists:[
         {
           title:'HTML',
-          type:'html'
+          type:'HTML'
+        },
+        {
+          title:'HTML2',
+          type:'HTML'
         },
         {
           title:'CSS',
-          type:'css'
+          type:'CSS'
         },
         {
-          title:'SCSS',
-          type:'css'
-        }
-      ],
-      isActive: false
+          title:'Bundler',
+          type:'Bundler'
+        },
+        {
+          title:'JAVA',
+          type:'JAVA'
+        },
+        {
+          title:'DB',
+          type:'DB'
+        },
+        {
+          title:'REFERENCE',
+          type:'REFERENCE'
+        },
+        {
+          title:'PORTFOLIO',
+          type:'PORTFOLIO'
+        },
+        {
+          title:'OTHER',
+          type:'OTHER'
+        },
+      ]
     }
   },
   methods: {
-      selectItem(i) {
-          this.isActive = i;
-      },
+    filter(event,type) {
+      const checkClass = event.target.classList.contains('active');
+      if(!checkClass) this.isActive = type;
+    },
+    filterModeAll(){
+      this.isActive = 'All';
+    }
+  },
+  mounted(){
+    this.filterModeAll()
   }
 }
 </script>
@@ -133,5 +178,26 @@ export default {
       border:1px solid red;
     }
   }
+
+
+  // transition list-item-fade effect
+  .list-item-fade-enter-active {
+    transition: all 0.3s ease;
+  }
+  .list-item-fade-leave-active {
+    transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
+  }
+  .list-item-fade-enter,
+  .list-item-fade-leave-to {
+    transform: translateX(10px);
+    opacity: 0.4;
+  }
+  .list-item-fade-enter-from,
+  .list-item-fade-leave-to {
+    transform: translateX(10px);
+    opacity: 0;
+  }
 }
+
+
 </style>

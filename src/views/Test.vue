@@ -12,7 +12,7 @@
 export default {
   data(){
     return{
-      show: true
+      show: true // true : 보여지는 상태 , fasle : 숨김
     }
   }
 }
