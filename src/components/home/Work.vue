@@ -12,19 +12,37 @@
       <!-- /title -->
       <!-- menu -->
       <ul class="menu">
-        <li 
-          :class="{ active: menu === isActive}"
+        <template 
           v-for="menu in menus" 
-          :key="menu"
-          @click="filter($event,menu)">
-          {{menu}}
-        </li>
+          :key="menu">
+          <li 
+            v-if="menu === 'All'" 
+            :class="{ active: menu === isActive}"
+            @click="filterModeAll()">
+            {{menu}} 
+          </li>
+          <li 
+            v-else 
+            :class="{ active: menu === isActive}" 
+            @click="filter($event,menu)">
+            {{menu}}
+          </li>
+        </template>
       </ul>
       <!-- /menu -->
       <!-- list -->
-      <TransitionGroup tag="ul" name="fade" class="list">
-        <template v-for="list in lists" :key="list.title">
-          <div class="list-item" v-if="list.type === isActive">
+      <TransitionGroup 
+        tag="ul" 
+        name="fade" 
+        class="list">
+        <template 
+          v-for="list in lists" 
+          :key="list.title">
+          <div class="list-item" v-if="isActive ===  'All' ? true:false">
+            제목 : {{list.title}} <br>
+            타입 : {{list.type}}
+          </div>
+          <div class="list-item" v-else-if="list.type === isActive">
             제목 : {{list.title}} <br>
             타입 : {{list.type}}
           </div>
@@ -158,23 +176,27 @@ export default {
   }
   .list {
     display: flex;
+    flex-wrap: wrap;
+    position: relative;
     .list-item {
       margin-right: 10px;
       border:1px solid red;
     }
   }
 
-  // transition list-item-fade effect
   .fade-move,
   .fade-enter-active,
   .fade-leave-active {
-    transition: all 0.2s cubic-bezier(1, 0.5, 0.8, 1);
+    transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
   }
+
   .fade-enter-from,
   .fade-leave-to {
     opacity: 0;
-    transform: translateX(10px);
+    transform: scaleY(0.01) translate(30px, 0);
+    // transform: translateX(10px);
   }
+
   .fade-leave-active {
     position: absolute;
   }
