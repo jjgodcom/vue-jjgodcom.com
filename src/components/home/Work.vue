@@ -22,30 +22,15 @@
       </ul>
       <!-- /menu -->
       <!-- list -->
-      <!-- <div class="list">
-        <transition name="list-item-fade" mode="out-in">
-          <template
-            v-for="list in lists"
-            :key="list.title">
-              <div class="list-item" v-if="true">All 일경우 싹다 출력 해야함</div>
-              <div class="list-item" v-else-if="list.type === isActive">
-                제목 : {{list.title}} <br>
-                타입 : {{list.type}}
-              </div>
-          </template>
-        </transition>
-      </div> -->
+      <TransitionGroup tag="ul" name="fade" class="list">
+        <template v-for="list in lists" :key="list.title">
+          <div class="list-item" v-if="list.type === isActive">
+            제목 : {{list.title}} <br>
+            타입 : {{list.type}}
+          </div>
+        </template>
+      </TransitionGroup>
       <!-- /list -->
-      <div class="list">
-          <template v-for="list in lists" :key="list.title">
-            <transition name="list-item-fade" mode="out-in">
-              <div class="list-item" v-if="list.type === isActive">All 일경우 싹다 출력 해야함
-                제목 : {{list.title}} <br>
-                타입 : {{list.type}}
-              </div>
-            </transition>
-          </template>
-      </div>
     </div>
   </div>
 </template>
@@ -72,7 +57,7 @@ export default {
           type:'HTML'
         },
         {
-          title:'HTML2',
+          title:'HTML23',
           type:'HTML'
         },
         {
@@ -179,25 +164,19 @@ export default {
     }
   }
 
-
   // transition list-item-fade effect
-  .list-item-fade-enter-active {
-    transition: all 0.3s ease;
+  .fade-move,
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: all 0.2s cubic-bezier(1, 0.5, 0.8, 1);
   }
-  .list-item-fade-leave-active {
-    transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
-  }
-  .list-item-fade-enter,
-  .list-item-fade-leave-to {
-    transform: translateX(10px);
-    opacity: 0.4;
-  }
-  .list-item-fade-enter-from,
-  .list-item-fade-leave-to {
-    transform: translateX(10px);
+  .fade-enter-from,
+  .fade-leave-to {
     opacity: 0;
+    transform: translateX(10px);
+  }
+  .fade-leave-active {
+    position: absolute;
   }
 }
-
-
 </style>
