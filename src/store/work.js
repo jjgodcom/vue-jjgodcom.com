@@ -3,11 +3,8 @@ export default {
   namespaced: true,
   // 상태
   state: () => ({
-    name: 'JJGODCOM',
-    email: 'jjgodcom1@gmail.com',
-    site: 'http://jjgodcom.com/',
-    image: 'https://raw.githubusercontent.com/jjgodcom/vue-jjgodcom.com/master/src/assets/common/logo.png',
-
+    isActive: '',
+    show:false,
     menus:[
       'All',
       'HTML',
@@ -57,6 +54,26 @@ export default {
         type:'OTHER'
       },
     ]
-
-  })
+  }),
+  getters: {},
+  mutations: {
+    updateIsActive(state, payload) {
+      state.isActive = payload
+    },
+    updateShow(state, payload) {
+      state.show = payload
+    }
+  },
+  actions: {
+    changeIsActive(context, payload) {
+      const { state, getters, commit } = context
+      commit('updateIsActive', payload)
+      console.log(state.isActive)
+    },
+    changeIsShow(context, payload) {
+      const { state, getters, commit } = context
+      commit('updateShow', payload)
+      console.log(state.show)
+    }
+  }
 }

@@ -14,6 +14,6 @@ export default {
       const { state, getters, commit } = context
       commit('updateState', payload)
       console.log(state.msg)
-    }
+    } 
   }
 }

@@ -11,6 +11,7 @@
       </h2>
       <!-- /title -->
       <!-- menu -->
+      <!-- <Menu></Menu> -->
       <ul class="menu">
         <template 
           v-for="menu in menus" 
@@ -50,14 +51,19 @@
 </template>
 
 <script>
+import Menu from '~/components/work/Menu'
+
 export default {
-  data(){
-    return{
-      isActive: '',
-      show:false
-    }
+  components:{
+    Menu
   },
   computed: {
+    isActive(){
+      return this.$store.state.work.isActive
+    },
+    show(){
+      return this.$store.state.work.show
+    },
     menus(){
       return this.$store.state.work.menus
     },
@@ -66,20 +72,23 @@ export default {
     }
   },
   methods: {
+    changeIsActive() {
+      this.$store.dispatch('work/changeIsActive', 'Hello Vue!!!')
+    },
+    leave(){
+      this.$store.dispatch('work/changeIsShow', true)
+    },
     filter(event,type) {
       const checkClass = event.target.classList.contains('active');
       if(!checkClass){
-        this.isActive = type;
-        this.show = false
+        this.$store.dispatch('work/changeIsActive', type)
+        this.$store.dispatch('work/changeIsShow', false)
       }
-    },
-    leave(){
-      this.show = true
-    }
+    } 
   },
   mounted(){
-    this.isActive = 'All';
-    this.show = true
+    this.$store.dispatch('work/changeIsActive', 'All')
+    this.$store.dispatch('work/changeIsShow', true)
   }
 }
 </script>
