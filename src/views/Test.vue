@@ -1,107 +1,176 @@
 <template>
-  <button @click="insert">insert at random index</button>
-  <button @click="reset">reset</button>
-
-  <TransitionGroup tag="ul" name="fade" class="">
-    <div v-for="list in lists" class="item" :key="list.title">
-      제목 : {{list.title}} <br>
-      타입 : {{list.type}}
+  <div class="home-work">
+    <div class="container">
+      <!-- title -->
+      <h2 class="title">
+        <RouterLink
+          to="/work">
+          WORK
+          <span>더보기 &gt;</span>
+        </RouterLink>
+      </h2>
+      <!-- /title -->
+      <!-- menu -->
+      <ul class="menu">
+        <template 
+          v-for="menu in menus" 
+          :key="menu">
+          <li
+            :class="{ active: menu === isActive}" 
+            @click="filter($event,menu)">
+            {{menu}}
+          </li>
+        </template>
+      </ul>
+      <!-- /menu -->
+      <!-- list -->
+      <Transition mode="out-in" @leave="leave">
+        <ul class="list" v-if="show">
+          <template v-for="list in lists" :key="list.title">
+            <li class="list-item" v-if="isActive ===  'All' ? true:false">
+              <div class="card">
+                제목 : {{list.title}} <br>
+                타입 : {{list.type}} <br>
+                {{isActive}}
+              </div>
+            </li>
+            <li class="list-item" v-else-if="list.type === isActive">
+              <div class="card">
+                제목 : {{list.title}} <br>
+                타입 : {{list.type}} <br>
+                {{isActive}}
+              </div>
+            </li>
+          </template>
+        </ul>
+      </Transition>
+      <!-- /list -->
     </div>
-  </TransitionGroup>
+  </div>
 </template>
 
 <script>
-const getInitialItems = () => [1, 2, 3, 4, 5]
-let id = getInitialItems().length + 1
-
 export default {
-  data() {
-    return {
-      items: getInitialItems(),
-      lists:[
-        {
-          title:'HTML',
-          type:'HTML'
-        },
-        {
-          title:'HTML23',
-          type:'HTML'
-        },
-        {
-          title:'CSS',
-          type:'CSS'
-        },
-        {
-          title:'Bundler',
-          type:'Bundler'
-        },
-        {
-          title:'JAVA',
-          type:'JAVA'
-        },
-        {
-          title:'DB',
-          type:'DB'
-        },
-        {
-          title:'REFERENCE',
-          type:'REFERENCE'
-        },
-        {
-          title:'PORTFOLIO',
-          type:'PORTFOLIO'
-        },
-        {
-          title:'OTHER',
-          type:'OTHER'
-        },
-      ]
+  data(){
+    return{
+      isActive: '',
+      show:false
+    }
+  },
+  computed: {
+    menus(){
+      return this.$store.state.work.menus
+    },
+    lists(){
+      return this.$store.state.work.lists
     }
   },
   methods: {
-    insert() {
-      const i = Math.round(Math.random() * this.items.length)
-      this.items.splice(i, 0, id++)
+    filter(event,type) {
+      const checkClass = event.target.classList.contains('active');
+      if(!checkClass){
+        this.isActive = type;
+        this.show = false
+      }
     },
-    reset() {
-      this.items = getInitialItems()
+    leave(){
+      this.show = true
     }
+  },
+  mounted(){
+    this.isActive = 'All';
+    this.show = true
   }
 }
 </script>
 
+<style lang="scss" scoped>
+@import '~/scss/var.scss';
+.home-work {
+  padding: 70px 0;
+  background-color: #f8f8f8;
+  .title {
+    text-align: center;
+    a {
+      display: block;
+      position: relative;
+      text-decoration: none;
+      color:#333;
+      font-family: $font--NotoSans;
+      font-size: 1.75em;
+      font-weight: 700;
+      span {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        font-size: 0.6em;
+        font-weight: 400;
+        line-height: 28px;
+      }
+    }
+  }
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+    li {
+      display: flex;
+      align-items: center;
+      padding: 5px 20px;
+      box-sizing: border-box;
+      height: 40px;
+      border-radius: 40px;
+      margin: 0 20px 20px 0;
+      box-shadow: 5px 5px 30px -10px rgb(0 0 0 / 15%);
+      transition: all .1s ease-in-out;
+      font-family: $font--NotoSans;
+      color:#979797;
+      cursor: pointer;
+      font-size: 1em;
+      &:hover,
+      &.active{
+        @include textGradient;
+      }
+    }
+  }
+  .list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: relative;
+    .list-item {
+      width: calc(33.33% - 8px);
+      margin-bottom: 12px;
+      background-color: #ccc;
+      position: relative;
+      &::before {
+        content: "";
+        display: block;
+        padding-bottom: 100%;
+      }
+      .card {
+        position: absolute;
+        top: 0;
+        left: 0 ;
+        width: 100%;
+        height: 100%;
+      }
+    }
 
-<style>
-.container {
-  position: relative;
-  padding: 0;
-}
+    
+  }
 
-.item {
-  width: 100%;
-  height: 30px;
-  background-color: #f3f3f3;
-  border: 1px solid #666;
-  box-sizing: border-box;
-}
+  .v-enter-active,
+  .v-leave-active {
+    transition: all 0.25s cubic-bezier(1, 0.5, 0.8, 1);
+  }
 
-/* 1. declare transition */
-.fade-move,
-.fade-enter-active,
-.fade-leave-active {
-  transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
-}
+  .v-enter-from,
+  .v-leave-to {
+    transform: translateX(10px);
+    opacity: 0.4;
+  }
 
-/* 2. declare enter from and leave to state */
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-  transform: scaleY(0.01) translate(30px, 0);
-}
-
-/* 3. ensure leaving items are taken out of layout flow so that moving
-      animations can be calculated correctly. */
-.fade-leave-active {
-  position: absolute;
 }
 </style>

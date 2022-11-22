@@ -15,14 +15,7 @@
         <template 
           v-for="menu in menus" 
           :key="menu">
-          <li 
-            v-if="menu === 'All'" 
-            :class="{ active: menu === isActive}"
-            @click="filterModeAll()">
-            {{menu}} 
-          </li>
-          <li 
-            v-else 
+          <li
             :class="{ active: menu === isActive}" 
             @click="filter($event,menu)">
             {{menu}}
@@ -31,23 +24,26 @@
       </ul>
       <!-- /menu -->
       <!-- list -->
-      <TransitionGroup 
-        tag="ul" 
-        name="fade" 
-        class="list">
-        <template 
-          v-for="list in lists" 
-          :key="list.title">
-          <div class="list-item" v-if="isActive ===  'All' ? true:false">
-            제목 : {{list.title}} <br>
-            타입 : {{list.type}}
-          </div>
-          <div class="list-item" v-else-if="list.type === isActive">
-            제목 : {{list.title}} <br>
-            타입 : {{list.type}}
-          </div>
-        </template>
-      </TransitionGroup>
+      <Transition mode="out-in" @leave="leave">
+        <ul class="list" v-if="show">
+          <template v-for="list in lists" :key="list.title">
+            <li class="list-item" v-if="isActive ===  'All' ? true:false">
+              <div class="card">
+                제목 : {{list.title}} <br>
+                타입 : {{list.type}} <br>
+                {{isActive}}
+              </div>
+            </li>
+            <li class="list-item" v-else-if="list.type === isActive">
+              <div class="card">
+                제목 : {{list.title}} <br>
+                타입 : {{list.type}} <br>
+                {{isActive}}
+              </div>
+            </li>
+          </template>
+        </ul>
+      </Transition>
       <!-- /list -->
     </div>
   </div>
@@ -57,69 +53,33 @@
 export default {
   data(){
     return{
-      menus:[
-        'All',
-        'HTML',
-        'CSS',
-        'Bundler',
-        'JAVA',
-        'DB',
-        'REFERENCE',
-        'PORTFOLIO',
-        'OTHER'
-      ],
-      isActive: false,
-      lists:[
-        {
-          title:'HTML',
-          type:'HTML'
-        },
-        {
-          title:'HTML23',
-          type:'HTML'
-        },
-        {
-          title:'CSS',
-          type:'CSS'
-        },
-        {
-          title:'Bundler',
-          type:'Bundler'
-        },
-        {
-          title:'JAVA',
-          type:'JAVA'
-        },
-        {
-          title:'DB',
-          type:'DB'
-        },
-        {
-          title:'REFERENCE',
-          type:'REFERENCE'
-        },
-        {
-          title:'PORTFOLIO',
-          type:'PORTFOLIO'
-        },
-        {
-          title:'OTHER',
-          type:'OTHER'
-        },
-      ]
+      isActive: '',
+      show:false
+    }
+  },
+  computed: {
+    menus(){
+      return this.$store.state.work.menus
+    },
+    lists(){
+      return this.$store.state.work.lists
     }
   },
   methods: {
     filter(event,type) {
       const checkClass = event.target.classList.contains('active');
-      if(!checkClass) this.isActive = type;
+      if(!checkClass){
+        this.isActive = type;
+        this.show = false
+      }
     },
-    filterModeAll(){
-      this.isActive = 'All';
+    leave(){
+      this.show = true
     }
   },
   mounted(){
-    this.filterModeAll()
+    this.isActive = 'All';
+    this.show = true
   }
 }
 </script>
@@ -176,29 +136,41 @@ export default {
   }
   .list {
     display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
     position: relative;
     .list-item {
-      margin-right: 10px;
-      border:1px solid red;
+      width: calc(33.33% - 8px);
+      margin-bottom: 12px;
+      background-color: #ccc;
+      position: relative;
+      &::before {
+        content: "";
+        display: block;
+        padding-bottom: 100%;
+      }
+      .card {
+        position: absolute;
+        top: 0;
+        left: 0 ;
+        width: 100%;
+        height: 100%;
+      }
     }
+
+    
   }
 
-  .fade-move,
-  .fade-enter-active,
-  .fade-leave-active {
-    transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+  .v-enter-active,
+  .v-leave-active {
+    transition: all 0.25s cubic-bezier(1, 0.5, 0.8, 1);
   }
 
-  .fade-enter-from,
-  .fade-leave-to {
-    opacity: 0;
-    transform: scaleY(0.01) translate(30px, 0);
-    // transform: translateX(10px);
+  .v-enter-from,
+  .v-leave-to {
+    transform: translateX(10px);
+    opacity: 0.4;
   }
 
-  .fade-leave-active {
-    position: absolute;
-  }
 }
 </style>

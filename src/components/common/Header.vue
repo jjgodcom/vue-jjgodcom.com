@@ -101,7 +101,7 @@ export default {
   },
   watch:{
     isHover(value){
-      console.log(value);
+      // console.log(value);
     }
   },
   methods:{
@@ -122,6 +122,7 @@ header {
   position: sticky;
   top: 0;
   background-color: #fff;
+  z-index: 1;
   .logo {
     position: absolute;
     top: 50%;
