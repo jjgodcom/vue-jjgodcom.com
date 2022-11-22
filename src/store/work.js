@@ -68,12 +68,12 @@ export default {
     changeIsActive(context, payload) {
       const { state, getters, commit } = context
       commit('updateIsActive', payload)
-      console.log(state.isActive)
+      // console.log(state.isActive)
     },
     changeIsShow(context, payload) {
       const { state, getters, commit } = context
       commit('updateShow', payload)
-      console.log(state.show)
+      // console.log(state.show)
     }
   }
 }

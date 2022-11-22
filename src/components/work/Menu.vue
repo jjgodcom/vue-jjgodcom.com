@@ -4,7 +4,7 @@
       v-for="menu in menus" 
       :key="menu">
       <li
-        :class="{ active: menu === isActive}" 
+        :class="{ active: menu === isActive}"
         @click="filter($event,menu)">
         {{menu}}
       </li>
@@ -15,12 +15,21 @@
 <script>
 export default {
   computed: {
+    isActive(){
+      return this.$store.state.work.isActive
+    },
     menus(){
       return this.$store.state.work.menus
     }
   },
   methods:{
-    
+    filter(event,type) {
+      const checkClass = event.target.classList.contains('active');
+      if(!checkClass){
+        this.$store.dispatch('work/changeIsActive', type)
+        this.$store.dispatch('work/changeIsShow', false)
+      }
+    }
   }
 }
 </script>
