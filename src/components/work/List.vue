@@ -2,19 +2,11 @@
   <Transition mode="out-in" @leave="leave">
     <ul class="list" v-if="show">
       <template v-for="list in lists" :key="list.title">
-        <li class="list-item" v-if="isActive ===  'All' ? true:false">
-          <div class="card">
-            제목 : {{list.title}} <br>
-            타입 : {{list.type}} <br>
-            {{isActive}}
-          </div>
+        <li class="item" v-if="isActive ===  'All' ? true:false">
+          <Card :list="list"></Card>
         </li>
-        <li class="list-item" v-else-if="list.type === isActive">
-          <div class="card">
-            제목 : {{list.title}} <br>
-            타입 : {{list.type}} <br>
-            {{isActive}}
-          </div>
+        <li class="item" v-else-if="list.type === isActive">
+          <Card :list="list"></Card>
         </li>
       </template>
     </ul>
@@ -22,7 +14,12 @@
 </template>
 
 <script>
+import Card from '~/components/work/Card'
+
 export default {
+  components: {
+    Card
+  },
   computed: {
     isActive(){
       return this.$store.state.work.isActive
@@ -48,7 +45,7 @@ export default {
   justify-content: space-around;
   flex-wrap: wrap;
   position: relative;
-  .list-item {
+  .item {
     width: calc(33.33% - 8px);
     margin-bottom: 12px;
     background-color: #ccc;
@@ -58,13 +55,7 @@ export default {
       display: block;
       padding-bottom: 100%;
     }
-    .card {
-      position: absolute;
-      top: 0;
-      left: 0 ;
-      width: 100%;
-      height: 100%;
-    }
+    
   }
 }
 .v-enter-active,
