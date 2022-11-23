@@ -42,7 +42,7 @@ export default {
 <style lang="scss" scoped>
 .list {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   position: relative;
   .item {

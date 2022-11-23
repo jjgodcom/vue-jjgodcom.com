@@ -10,49 +10,124 @@ export default {
       'HTML',
       'CSS',
       'Bundler',
-      'JAVA',
+      'Java',
       'DB',
-      'REFERENCE',
-      'PORTFOLIO',
-      'OTHER'
+      'Reference',
+      'Protfolio',
+      'Git',
+      'Other'
     ],
     lists:[
       {
-        title:'HTML',
-        type:'HTML'
+        title:'포폴 소개페이지',
+        type:'portfolio',
+        link:'/portfolio'
       },
       {
-        title:'HTML2',
-        type:'HTML'
+        title:'필기페이지',
+        type:'test2',
+        link:'/note'
+      },
+      {
+        title:'Overwatch',
+        type:'Protfolio',
+        link:''
+      },
+      {
+        title:'Movie Search',
+        type:'Protfolio',
+        link:''
+      },
+      {
+        title:'jjgodcom.com',
+        type:'Protfolio',
+        link:''
+      },
+      {
+        title:'Git',
+        type:'Git',
+        link:''
+      },
+      {
+        title:'Markdown(.md)',
+        type:'Git',
+        link:''
+      },
+      {
+        title:'VSCode',
+        type:'Other',
+        link:''
+      },
+      {
+        title:'Setting',
+        type:'Other',
+        link:''
+      },
+      {
+        title:'Reference',
+        type:'Reference',
+        link:''
+      },
+      {
+        title:'HTML',
+        type:'HTML',
+        link:''
       },
       {
         title:'CSS',
-        type:'CSS'
+        type:'CSS',
+        link:''
       },
       {
-        title:'Bundler',
-        type:'Bundler'
+        title:'Scss',
+        type:'CSS',
+        link:''
       },
       {
-        title:'JAVA',
-        type:'JAVA'
+        title:'JavaScript',
+        type:'Java',
+        link:''
       },
       {
-        title:'DB',
-        type:'DB'
+        title:'jQuery',
+        type:'Java',
+        link:''
       },
       {
-        title:'REFERENCE',
-        type:'REFERENCE'
+        title:'정규식',
+        type:'Java',
+        link:''
       },
       {
-        title:'PORTFOLIO',
-        type:'PORTFOLIO'
+        title:'Node.js',
+        type:'Java',
+        link:''
       },
       {
-        title:'OTHER',
-        type:'OTHER'
+        title:'Vue.js',
+        type:'Java',
+        link:''
       },
+      {
+        title:'Parcel',
+        type:'Bundler',
+        link:''
+      },
+      {
+        title:'WebPack',
+        type:'Bundler',
+        link:''
+      },
+      {
+        title:'Oracle',
+        type:'DB',
+        link:''
+      },
+      {
+        title:'MySQL',
+        type:'DB',
+        link:''
+      }
     ]
   }),
   getters: {},

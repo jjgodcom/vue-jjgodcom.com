@@ -27,7 +27,8 @@ export default createRouter({
     },
     {
       path: '/portfolio',
-      component: Portfolio
+      component: Portfolio,
+      props:true
     },
     {
       path: '/note',

@@ -1,12 +1,22 @@
 <template>
-  <div class="card">
-    <div class="border-box"></div>
-    <div class="text-box">
-      <div class="text">{{list.title}}</div>
+  <!-- <RouterLink :to="list.link">
+    <div class="card"> 
+      <div class="border-box"></div>
+      <div class="text-box">
+        <div class="text">{{list.title}}</div>
+      </div>
+      제목 : {{list.title}} <br>
     </div>
-    <!-- 제목 : {{list.title}} <br> -->
-    <!-- 타입 : {{list.type}} <br> -->
-  </div>
+  </RouterLink> -->
+  <RouterLink :to="list.link">
+    <div class="card"> 
+      <div class="border-box"></div>
+      <div class="text-box">
+        <div class="text">{{list.title}}</div>
+      </div>
+      제목 : {{list.title}} <br>
+    </div>
+  </RouterLink>
 </template>
 
 <script>
@@ -74,6 +84,7 @@ export default {
     overflow: hidden;
     .text {
       width: 100%;
+      height: 100%;
       position: absolute;
       top: -30px;
       text-align: center;
