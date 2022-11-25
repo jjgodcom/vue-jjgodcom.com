@@ -14,31 +14,37 @@ export default createRouter({
   },
   routes: [
     {
+      name:'',
       path: '/',
       component: Home
     },
     {
+      name:'',
       path: '/about',
       component: About
     },
     {
+      name:'',
       path: '/work',
       component: Work
     },
     {
-      path: '/portfolio',
-      component: Portfolio,
-      props:true
+      name:'portfolio',
+      path: '/portfolio/:title',
+      component: Portfolio
     },
     {
-      path: '/note',
+      name:'note',
+      path: '/note/:title',
       component: Note
     },
     {
+      name:'',
       path: '/:notFound(.*)',
       component: NotFound
     },
     {
+      name:'',
       path: '/test',
       component: Test
     }

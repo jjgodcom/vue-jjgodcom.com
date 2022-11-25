@@ -29,7 +29,7 @@ export default {
 
 <style lang="scss" scoped>
 .home-work {
-  // padding: 70px 0;
+  padding: 100px 0;
   // background-color: #f8f8f8;
 }
 </style>

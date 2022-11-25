@@ -1,6 +1,6 @@
 <template>
-  <!-- <Title></Title> -->
-  <!-- <About></About> -->
+  <Title></Title>
+  <About></About>
   <Work></Work>
   <!-- <HelloWorld /> -->
 </template>

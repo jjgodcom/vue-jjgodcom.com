@@ -18,115 +18,184 @@ export default {
       'Other'
     ],
     lists:[
+      // page : 이동될 페이지 분류 portfolio OR note
+      // title : 이름
+      // type : work메뉴 클릭시 분류될거
+      // image : 이미지
+      // memo : 현상황 메모 나중에 지워야함
+
+      // portfolio
       {
-        title:'포폴 소개페이지',
-        type:'portfolio',
-        link:'/portfolio'
-      },
-      {
-        title:'필기페이지',
-        type:'test2',
-        link:'/note'
-      },
-      {
-        title:'Overwatch',
+        page:'portfolio',
+        title:'jjgodcom.com-Vue',
         type:'Protfolio',
-        link:''
+        image:'',
+        memo:'썸네일+이미지 해야함'
       },
       {
+        page:'portfolio',
+        title:'jjgodcom.com-ftp',
+        type:'Protfolio',
+        image:'',
+        memo:'썸네일 해야함'
+      },
+      {
+        page:'portfolio',
         title:'Movie Search',
         type:'Protfolio',
-        link:''
+        image:'',
+        memo:'썸네일 해야함'
       },
       {
-        title:'jjgodcom.com',
+        page:'portfolio',
+        title:'Overwatch',
         type:'Protfolio',
-        link:''
+        image:'',
+        memo:'썸네일 해야함'
       },
       {
+        page:'portfolio',
+        title:'Starbucks',
+        type:'Protfolio',
+        image:'',
+        memo:'썸네일 해야함'
+      },
+      {
+        page:'portfolio',
+        title:'jjgodcom.com-2018',
+        type:'Protfolio',
+        image:'',
+        memo:'썸네일 해야함'
+      },
+      {
+        page:'portfolio',
+        title:'Webstandard',
+        type:'Protfolio',
+        image:'',
+        memo:'썸네일 해야함'
+      },
+      {
+        page:'portfolio',
+        title:'Hynix',
+        type:'Protfolio',
+        image:'',
+        memo:'썸네일 해야함'
+      },
+      {
+        page:'portfolio',
+        title:'경주월드',
+        type:'Protfolio',
+        image:'',
+        memo:'썸네일 해야함'
+      },
+
+      {
+        page:'note',
+        title:'필기페이지',
+        type:'test2',
+        image:''
+      },
+      {
+        page:'',
         title:'Git',
         type:'Git',
-        link:''
+        image:''
       },
       {
+        page:'',
         title:'Markdown(.md)',
         type:'Git',
-        link:''
+        image:''
       },
       {
+        page:'',
         title:'VSCode',
         type:'Other',
-        link:''
+        image:''
       },
       {
+        page:'',
         title:'Setting',
         type:'Other',
-        link:''
+        image:''
       },
       {
+        page:'',
         title:'Reference',
         type:'Reference',
-        link:''
+        image:''
       },
       {
+        page:'',
         title:'HTML',
         type:'HTML',
-        link:''
+        image:''
       },
       {
+        page:'',
         title:'CSS',
         type:'CSS',
-        link:''
+        image:''
       },
       {
+        page:'',
         title:'Scss',
         type:'CSS',
-        link:''
+        image:''
       },
       {
+        page:'',
         title:'JavaScript',
         type:'Java',
-        link:''
+        image:''
       },
       {
+        page:'',
         title:'jQuery',
         type:'Java',
-        link:''
+        image:''
       },
       {
+        page:'',
         title:'정규식',
         type:'Java',
-        link:''
+        image:''
       },
       {
+        page:'',
         title:'Node.js',
         type:'Java',
-        link:''
+        image:''
       },
       {
+        page:'',
         title:'Vue.js',
         type:'Java',
-        link:''
+        image:''
       },
       {
+        page:'',
         title:'Parcel',
         type:'Bundler',
-        link:''
+        image:''
       },
       {
+        page:'',
         title:'WebPack',
         type:'Bundler',
-        link:''
+        image:''
       },
       {
+        page:'',
         title:'Oracle',
         type:'DB',
-        link:''
+        image:''
       },
       {
+        page:'',
         title:'MySQL',
         type:'DB',
-        link:''
+        image:''
       }
     ]
   }),

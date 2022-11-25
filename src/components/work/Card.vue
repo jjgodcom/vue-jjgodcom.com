@@ -1,20 +1,12 @@
 <template>
-  <!-- <RouterLink :to="list.link">
+  <RouterLink :to="{name: list.page, params: {title: list.title}}">
     <div class="card"> 
       <div class="border-box"></div>
       <div class="text-box">
         <div class="text">{{list.title}}</div>
       </div>
       제목 : {{list.title}} <br>
-    </div>
-  </RouterLink> -->
-  <RouterLink :to="list.link">
-    <div class="card"> 
-      <div class="border-box"></div>
-      <div class="text-box">
-        <div class="text">{{list.title}}</div>
-      </div>
-      제목 : {{list.title}} <br>
+      메모 : {{list.memo}} <br>
     </div>
   </RouterLink>
 </template>
@@ -31,6 +23,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '~/scss/var.scss';
 .card {
   position: absolute;
   top: 0;
@@ -97,6 +90,7 @@ export default {
       transition: all .6s ease;
       padding: 0 10px;
       box-sizing: border-box;
+      font-family: $font--NotoSans;
     }
   }
 

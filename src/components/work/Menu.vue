@@ -41,7 +41,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 30px;
+  margin: 30px 0;
   li {
     display: flex;
     align-items: center;
