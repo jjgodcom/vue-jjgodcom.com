@@ -34,10 +34,18 @@
     <div class="view">
       <h2>View</h2>
       <div class="image-box">
-        <img 
-          :src="this.getportfolioInfo[0].image.default" 
-          :alt="this.getportfolioInfo[0].title"
-          :title="this.getportfolioInfo[0].title">
+          <vue-load-image> 
+            <template v-slot:image>
+              <img 
+                :src="this.getportfolioInfo[0].image.default" 
+                :alt="this.getportfolioInfo[0].title"
+                :title="this.getportfolioInfo[0].title">
+            </template>
+            <template v-slot:preloader> 
+              <img src="https://raw.githubusercontent.com/john015/vue-load-image/master/example/image-loader.gif" />
+            </template>
+            <template v-slot:error> image load fails </template>
+          </vue-load-image>
       </div>
     </div>
     <!-- /view -->
@@ -45,11 +53,11 @@
 </template>
 
 <script>
-export default {
-  data(){
-    return{
+import VueLoadImage from 'vue-load-image'
 
-    }
+export default {
+  components: {
+    'vue-load-image': VueLoadImage
   },
   computed: {
     route_title(){

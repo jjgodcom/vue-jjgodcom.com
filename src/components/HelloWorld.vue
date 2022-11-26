@@ -9,7 +9,7 @@
   <div class="container">
     <h1>컨테이너 테스트</h1>
     <!-- <button @click="changeImageURL">change image</button> -->
-    <vue-load-image>
+    <vue-load-image> 
       <template v-slot:image>
         <img :src="src" />
       </template>
