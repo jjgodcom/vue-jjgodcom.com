@@ -20,7 +20,7 @@ export default {
     }
   }
 }
-</script>
+</script> 
 
 <style lang="scss" scoped>
 @import '~/scss/var.scss';
