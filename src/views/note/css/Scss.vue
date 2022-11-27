@@ -1,0 +1,3 @@
+<template>
+  Scss.vue
+</template>

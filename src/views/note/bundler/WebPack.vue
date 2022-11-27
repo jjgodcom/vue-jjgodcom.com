@@ -1,0 +1,3 @@
+<template>
+  WebPack.vue
+</template>

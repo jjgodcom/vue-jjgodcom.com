@@ -88,7 +88,7 @@ export default {
         image:'',
         memo:'썸네일 해야함'
       },
-      // git
+      // Git 
       {
         page:'git',
         title:'Git',
@@ -96,97 +96,104 @@ export default {
         image:''
       },
       {
-        page:'',
+        page:'markdown',
         title:'Markdown(.md)',
         type:'Git',
         image:''
       },
+      // Other
       {
-        page:'',
+        page:'vscode',
         title:'VSCode',
         type:'Other',
         image:''
       },
       {
-        page:'',
+        page:'setting',
         title:'Setting',
         type:'Other',
         image:''
       },
+      // Reference
       {
-        page:'',
+        page:'reference',
         title:'Reference',
         type:'Reference',
         image:''
       },
+      // HTML
       {
-        page:'',
+        page:'html',
         title:'HTML',
         type:'HTML',
         image:''
       },
+      // CSS
       {
-        page:'',
+        page:'css',
         title:'CSS',
         type:'CSS',
         image:''
       },
       {
-        page:'',
+        page:'scss',
         title:'Scss',
         type:'CSS',
         image:''
       },
+      // Java
       {
-        page:'',
+        page:'javaScript',
         title:'JavaScript',
         type:'Java',
         image:''
       },
       {
-        page:'',
+        page:'jQuery',
         title:'jQuery',
         type:'Java',
         image:''
       },
       {
-        page:'',
+        page:'regEx',
         title:'정규식',
         type:'Java',
         image:''
       },
       {
-        page:'',
+        page:'node',
         title:'Node.js',
         type:'Java',
         image:''
       },
       {
-        page:'',
+        page:'vue',
         title:'Vue.js',
         type:'Java',
         image:''
       },
+      // Bundler
       {
-        page:'',
+        page:'parcel',
         title:'Parcel',
         type:'Bundler',
         image:''
       },
       {
-        page:'',
+        page:'webPack',
         title:'WebPack',
         type:'Bundler',
         image:''
       },
+      // DB
       {
-        page:'',
+        page:'oracle',
         title:'Oracle',
         type:'DB',
         image:''
       },
       {
-        page:'',
+        page:'mysql',
         title:'MySQL',
         type:'DB',
         image:''
