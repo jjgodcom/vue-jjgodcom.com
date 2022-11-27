@@ -1,3 +1,3 @@
 <template>
-  <h1>Note Page</h1>
+  Git
 </template>

@@ -24,14 +24,6 @@ export default {
       // image : 이미지
       // memo : 현상황 메모 나중에 지워야함
 
-      // note
-      {
-        page:'note',
-        title:'필기페이지',
-        type:'test2',
-        image:''
-      },
-
       // portfolio
       {
         page:'portfolio',
@@ -96,9 +88,9 @@ export default {
         image:'',
         memo:'썸네일 해야함'
       },
-      
+      // git
       {
-        page:'',
+        page:'git',
         title:'Git',
         type:'Git',
         image:''

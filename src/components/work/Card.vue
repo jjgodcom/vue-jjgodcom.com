@@ -7,6 +7,7 @@
       </div>
       제목 : {{list.title}} <br>
       메모 : {{list.memo}} <br>
+      {{list.page}}
     </div>
   </RouterLink>
 </template>

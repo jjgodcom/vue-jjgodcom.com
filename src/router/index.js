@@ -3,7 +3,7 @@ import Home from '~/views/Home'
 import About from '~/views/About'
 import Work from '~/views/Work'
 import Portfolio from '~/views/Portfolio'
-import Note from '~/views/Note'
+import Git from '~/views/note/Git'
 import NotFound from '~/views/NotFound'
 import Test from '~/views/Test'
 
@@ -34,9 +34,9 @@ export default createRouter({
       component: Portfolio
     },
     {
-      name:'note',
-      path: '/note/:title',
-      component: Note
+      name:'git',
+      path: "/Git",
+      component: Git
     },
     {
       name:'',
