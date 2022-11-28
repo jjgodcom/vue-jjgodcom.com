@@ -73,7 +73,7 @@ export default {
         page:'javaScript',
         title:'JavaScript',
         type:'Java',
-        image:require('assets/work/java/javaScript.png').default,
+        image:require('assets/work/java/javascript.png').default,
         memo:''
       },
       {
