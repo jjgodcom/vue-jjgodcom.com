@@ -1,13 +1,12 @@
 <template>
   <RouterLink :to="{name: list.page, params: {title: list.title}}">
     <div class="card"> 
+      <div class="bg"></div>
       <div class="border-box"></div>
       <div class="text-box">
         <div class="text">{{list.title}}</div>
       </div>
-      제목 : {{list.title}} <br>
-      메모 : {{list.memo}} <br>
-      {{list.page}}
+      <div class="image-box" :style="{ backgroundImage : `url(${list.image})`}"></div>
     </div>
   </RouterLink>
 </template>
@@ -35,7 +34,7 @@ export default {
     width: calc(100% - 24px);
     height: calc(100% - 24px);
     position: absolute;
-    z-index: 6;
+    z-index: 1;
     left: 12px;
     top: 12px;
     border: none;
@@ -69,6 +68,7 @@ export default {
     }
   }
   .text-box {
+    z-index: 1;
     width: calc(100% - 24px);
     height: 30px;
     position: absolute;
@@ -94,15 +94,41 @@ export default {
       font-family: $font--NotoSans;
     }
   }
-
-  // hover
-  &:hover .border-box::before,
-  &:hover .border-box::after{
+  .bg {
+    z-index: 1;
+    position: absolute;
+    top:0;
     width: 100%;
     height: 100%;
+    animation-duration: .4s;
+    transition: background-color .4s;
+    background-color: rgba(51,51,51,.0);
   }
-  &:hover .text-box .text {
+  .image-box {
+    position: absolute;
     top: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(0) blur(0);
   }
+
+  // hover
+  &:hover {
+    .border-box::before,
+    .border-box::after{
+      width: 100%;
+      height: 100%;
+    }
+    .text-box .text {
+      top: 0;
+    }
+    .bg {
+      background-color: rgba(51,51,51,.5);
+    }
+  }
+  
 }
 </style>

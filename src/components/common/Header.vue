@@ -8,8 +8,6 @@
           @mouseover="hover"
           @mouseleave="hover">
         </div>
-        <!-- <img src="~/assets/common/logo.png" alt="logo" title="logo">
-        <img src="~/assets/common/logo_hover_2.png" alt="logo" title="logo"> -->
       </RouterLink>
       <div class="logo-text">Hi~ I am Suho,park :) 💦</div>
     </div>
@@ -122,7 +120,7 @@ header {
   position: sticky;
   top: 0;
   background-color: #fff;
-  z-index: 1;
+  z-index: 2;
   .logo {
     position: absolute;
     top: 50%;
@@ -136,7 +134,7 @@ header {
       background-repeat: no-repeat;
       transition: 0.3s;
       &.active {
-        background-image: url('../../assets/common/logo_hover_2.png');
+        background-image: url('../../assets/common/logoHover.png');
       }
     }
     &-text {
