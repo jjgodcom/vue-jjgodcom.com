@@ -283,6 +283,9 @@ header {
 @include media890 {
   header {
     .container {
+      .menu {
+        display: none;
+      }
       .icon {
         li {
           &:nth-child(2) {
