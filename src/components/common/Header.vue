@@ -66,16 +66,29 @@
             </svg>
           </a>
         </li>
-        <li>
+        <li @click="this.isClick = !this.isClick">
           <a href="javascript:void(0)">
             <svg data-v-321af00c="" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 28 28" xml:space="preserve">
-              <circle data-v-321af00c="" cx="14" cy="14" r="14" class="circle" style="fill: rgb(117, 116, 116);"></circle>
+              <circle :class="{ active: isClick}" data-v-321af00c="" cx="14" cy="14" r="14" class="circle" style="fill: rgb(117, 116, 116);"></circle>
               <line data-v-321af00c="" x1="8" y1="8" x2="20" y2="8" style="fill: none; stroke: rgb(255, 255, 255); stroke-width: 2; stroke-linecap: round; stroke-miterlimit: 10;"></line>
               <line data-v-321af00c="" x1="8" y1="14" x2="20" y2="14" style="fill: none; stroke: rgb(255, 255, 255); stroke-width: 2; stroke-linecap: round; stroke-miterlimit: 10;"></line>
               <line data-v-321af00c="" x1="8" y1="20" x2="20" y2="20" style="fill: none; stroke: rgb(255, 255, 255); stroke-width: 2; stroke-linecap: round; stroke-miterlimit: 10;"></line>
             </svg>
           </a>
-
+          <!-- mobile menu -->
+          <div 
+            class="mobile-menu" 
+            :class="{ active: isClick}">
+            <div
+              v-for="nav in navigations"
+              :key="nav.name">
+              <RouterLink 
+                :to="nav.href">
+                {{nav.name}}
+              </RouterLink>
+            </div>
+          </div>
+          <!-- /mobile menu -->
         </li>
       </ul>
       <!-- //icon -->
@@ -88,6 +101,7 @@ export default {
   data(){
     return{
       isHover: false,
+      isClick:false,
       navigations:[
         {
           name:'About',
@@ -110,6 +124,9 @@ export default {
   },
   watch:{
     isHover(value){
+      // console.log(value);
+    },
+    isClick(value){
       console.log(value);
     }
   },
@@ -221,6 +238,44 @@ header {
         }
         &:last-child {
           display: none;
+          position: relative;
+          .circle {
+            &.active {
+              fill: #303242 !important;
+              transition: 0.3s;
+            }
+          }
+          .mobile-menu {
+            position: absolute;
+            top: 30px;
+            right: 0;
+            transform: scale(0);
+            transform-origin: right top;
+            transition: all 0.4s cubic-bezier(0.54, -0.10, 0.57, 0.57);
+            background-color: #303242;
+            color: #fff;
+            padding: 15px 0;
+            text-align: left;
+            border-radius: 100px;
+            opacity: 0;
+            user-select: none;
+
+            &.active {
+              transform: scale(1);
+              border-radius: 20px;
+              opacity: 1;
+              user-select: auto;
+            }
+            
+            div {
+              padding: 10px 30px;
+              cursor: pointer;
+              a {
+                color:#fff;
+                text-decoration: none;
+              }
+            }
+          }
         }
         // common
         &:first-child:hover,
@@ -266,7 +321,7 @@ header {
         }
         &:nth-child(3):hover {
           .circle {
-            fill: rgb(14, 181, 106) !important;
+            fill: #303242 !important;
             transition: 0.3s;
           }
         }
