@@ -18,3 +18,41 @@ $font--NotoSans: 'Noto Sans KR', sans-serif;
     background-position: -60px;
   }
 }
+
+
+// media
+@mixin media1920 {
+  @media (max-width: 1920px){
+    @content;
+  }
+}
+@mixin media1680 {
+  @media (max-width: 1680px){
+    @content;
+  }
+}
+@mixin media1440 {
+  @media (max-width: 1440px){
+    @content;
+  }
+}
+@mixin media1366 {
+  @media (max-width: 1366px){
+    @content;
+  }
+}
+@mixin media1204 {
+  @media (max-width: 1204px){
+    @content;
+  }
+}
+@mixin media890 {
+  @media (max-width: 890px){
+    @content;
+  }
+}
+@mixin media550 {
+  @media (max-width: 550px){
+    @content;
+  }
+}

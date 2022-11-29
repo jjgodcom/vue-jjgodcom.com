@@ -1,3 +1,3 @@
 <template>
-  리셋함
+  test
 </template>

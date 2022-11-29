@@ -66,6 +66,17 @@
             </svg>
           </a>
         </li>
+        <li>
+          <a href="javascript:void(0)">
+            <svg data-v-321af00c="" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 28 28" xml:space="preserve">
+              <circle data-v-321af00c="" cx="14" cy="14" r="14" class="circle" style="fill: rgb(117, 116, 116);"></circle>
+              <line data-v-321af00c="" x1="8" y1="8" x2="20" y2="8" style="fill: none; stroke: rgb(255, 255, 255); stroke-width: 2; stroke-linecap: round; stroke-miterlimit: 10;"></line>
+              <line data-v-321af00c="" x1="8" y1="14" x2="20" y2="14" style="fill: none; stroke: rgb(255, 255, 255); stroke-width: 2; stroke-linecap: round; stroke-miterlimit: 10;"></line>
+              <line data-v-321af00c="" x1="8" y1="20" x2="20" y2="20" style="fill: none; stroke: rgb(255, 255, 255); stroke-width: 2; stroke-linecap: round; stroke-miterlimit: 10;"></line>
+            </svg>
+          </a>
+
+        </li>
       </ul>
       <!-- //icon -->
     </div>
@@ -99,7 +110,7 @@ export default {
   },
   watch:{
     isHover(value){
-      // console.log(value);
+      console.log(value);
     }
   },
   methods:{
@@ -150,7 +161,7 @@ header {
     }
   }
   .container {
-    width: 100%;
+    // width: 100%;
     display: flex;
     
     .menu {
@@ -205,12 +216,15 @@ header {
               color:#fff;
             }
           }
-        &:last-child {
+        &:nth-child(2) {
           margin-right: 0;
+        }
+        &:last-child {
+          display: none;
         }
         // common
         &:first-child:hover,
-        &:last-child:hover {
+        &:nth-child(2):hover {
           a {
             position: relative;
             &::before,
@@ -235,7 +249,7 @@ header {
             }
           }
         }
-        &:last-child:hover {
+        &:nth-child(2):hover {
           path {
             fill:#ffc723;
             transition: 0.3s;
@@ -250,6 +264,12 @@ header {
             }
           }
         }
+        &:nth-child(3):hover {
+          .circle {
+            fill: rgb(14, 181, 106) !important;
+            transition: 0.3s;
+          }
+        }
       }
       svg {
         width: 24px;
@@ -258,5 +278,25 @@ header {
     }
   }
 
+}
+
+@include media890 {
+  header {
+    .container {
+      .icon {
+        li {
+          &:nth-child(2) {
+            margin-right: 10px;
+          }
+          &:last-child {
+            display: block;
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+  
+  
 }
 </style>
