@@ -1,10 +1,35 @@
 <template>
-  <div class="to-top"></div>
+  <div class="to-top" @click="toTop"></div>
 </template>
 
 <script>
+import gsap from 'gsap'
+import { ScrollToPlugin } from 'gsap/all'
+gsap.registerPlugin(ScrollToPlugin)
+
 export default {
-  
+  mounted(){
+    window.addEventListener("scroll",function(){
+      const toTopEl = document.querySelector(".to-top");
+
+      if(window.scrollY > 300){
+        gsap.to(toTopEl, 0.2, {
+          x: 0
+        });
+      }else{
+        gsap.to(toTopEl, 0.2, {
+          x: 100
+        });
+      }
+    });
+  },
+  methods:{
+    toTop(){
+      gsap.to(window, 0.7, {
+        scrollTo: 0
+      });
+    }
+  }
 }
 </script>
 
@@ -25,7 +50,7 @@ export default {
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;
-  transform: translate(0, 0px);
+  transform: translate(100px, 0px);
   &:hover {
     background-color: #efefee;
   }
