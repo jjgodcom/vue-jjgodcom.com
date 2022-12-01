@@ -1,18 +1,20 @@
 <template>
-  <!-- 페이지별 확인할떄 쓰는거임 -->
   <Header></Header>
   <RouterView />
   <Footer></Footer>
+  <ToTop></ToTop>
 </template>
 
 <script>
 import Header from '~/components/common/Header'
 import Footer from '~/components/common/Footer'
+import ToTop from '~/components/common/ToTop'
 
 export default {
   components: {
     Header,
-    Footer
+    Footer,
+    ToTop
   }
 }
 </script>
