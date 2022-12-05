@@ -131,4 +131,10 @@ export default {
   }
   
 }
+
+@include media890 {
+  .card .text-box .text {
+    font-size: 1.2em;
+  }
+}
 </style>

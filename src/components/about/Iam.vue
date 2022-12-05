@@ -30,4 +30,16 @@
     line-height: 1.63;
   }
 }
+@include media890 {
+  .iAm {
+    padding: 40px 0;
+    .title {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .text {
+      text-align: center;
+    }
+  }
+}
 </style>

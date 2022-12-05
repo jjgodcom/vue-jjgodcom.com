@@ -28,8 +28,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '~/scss/var.scss';
 .home-work {
   padding: 70px 0;
   background-color: #f8f8f8;
+}
+@include media890 {
+  .home-work {
+    padding: 40px 0;
+  }
 }
 </style>

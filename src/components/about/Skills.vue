@@ -95,4 +95,17 @@ export default {
     }
   }
 }
+@include media890 {
+  .skills {
+    padding-top: 40px;
+    padding-bottom: 0;
+    .title {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    ul {
+      justify-content: center;
+    }
+  }
+}
 </style>

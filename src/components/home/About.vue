@@ -21,7 +21,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '~/scss/var.scss';
 .container {
   padding-top: 100px;
+}
+
+@include media1204 {
+  .container {
+    padding: 50px 0;
+  }
 }
 </style>

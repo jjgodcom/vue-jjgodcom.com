@@ -337,6 +337,10 @@ header {
 
 @include media890 {
   header {
+    height: 80px;
+    .logo-text {
+      display: none;
+    }
     .container {
       .menu {
         display: none;

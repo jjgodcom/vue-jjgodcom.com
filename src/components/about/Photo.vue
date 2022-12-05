@@ -26,6 +26,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '~/scss/var.scss';
 .photo{
   width: 250px;
   height: 250px;
@@ -38,6 +39,11 @@ export default {
   position: relative;
   img{
     width: 100%;
+  }
+}
+@include media890 {
+  .photo {
+    margin: 0 auto;
   }
 }
 </style>

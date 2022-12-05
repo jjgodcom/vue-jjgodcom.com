@@ -40,14 +40,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '~/scss/var.scss';
+
 .list {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   position: relative;
   .item {
-    width: calc(33.33% - 8px);
-    margin-bottom: 12px;
     background-color: #ccc;
     position: relative;
     &::before {
@@ -67,5 +67,40 @@ export default {
 .v-leave-to {
   transform: translateX(10px);
   opacity: 0.4;
+}
+
+
+.list {
+  .item {
+    width: calc(20% - 8px);
+    margin-bottom: 8px;
+  }
+}
+
+@include media1440 {
+  .list {
+    .item {
+      width: calc(25% - 8px);
+      margin-bottom: 8px;
+    }
+  }
+}
+
+@include media890 {
+  .list {
+    .item {
+      width: calc(33.33% - 8px);
+      margin-bottom: 12px;
+    }
+  }
+}
+
+@include media550 {
+  .list {
+    .item {
+      width: calc(50% - 8px);
+      margin-bottom: 12px;
+    }
+  }
 }
 </style>

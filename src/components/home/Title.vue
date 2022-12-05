@@ -27,10 +27,19 @@ h1 {
     to { width: 0 }
 }
 
-
-@media (max-width: 1204px){
+@include media1204 {
+  .container {
+    padding: 50px 0;
+  }
   h1 {
     font-size: 1.75em;
+  }
+}
+
+@include media890 {
+  h1 {
+    font-size: 1.5em;
+    text-align: center;
   }
 }
 </style>
