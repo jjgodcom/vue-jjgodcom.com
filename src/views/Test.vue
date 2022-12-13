@@ -1,159 +1,106 @@
 <template>
-  <div class="main">
-    <label class="menu-button-wrapper" for="">
-      <input type="checkbox" class="menu-button">
-      <div class="icon-wrapper">
-        <label class="hamburger">
-          <input class="hamburger-input" type="checkbox">
-          <span class="hamburger-line first"></span>
-          <span class="hamburger-line second"></span>
-          <span class="hamburger-line third"></span>
-        </label>
-      </div>
-      <div class="item-list">
-        <div>Home</div>
-        <div>About</div>
-        <div>Profile</div>
-        <div>Contact</div>
-      </div>
-    </label>
+  <div class="container">
+    <h1>A Welcome to JJGODCOM world! 🖥️</h1>
+    <h1>Finding joy in front-end development!</h1>
+    <h1>: vue.js <span class="text"></span></h1>
   </div>
 </template>
 
+<script>
+export default {
+  mounted(){
+    const $text = document.querySelector(".text");
+    // 글자 모음
+    const letters = [
+      "HTML(5)",
+      "CSS(3)", 
+      "SCSS", 
+      "JavaScript(es5,6)"
+    ];
+    // 글자 입력 속도
+    const speed = 100;
+    let i = 0;
+
+    // 타이핑 효과
+    const typing = async () => {  
+      const letter = letters[i].split("");
+      
+      while (letter.length) {
+        await wait(speed);
+        $text.innerHTML += letter.shift(); 
+      }
+      
+      // 잠시 대기
+      await wait(800);
+      
+      // 지우는 효과
+      remove();
+    }
+
+    // 글자 지우는 효과
+    const remove = async () => {
+      const letter = letters[i].split("");
+      
+      while (letter.length) {
+        await wait(speed);
+        
+        letter.pop();
+        $text.innerHTML = letter.join(""); 
+      }
+      
+      // 다음 순서의 글자로 지정, 타이핑 함수 다시 실행
+      i = !letters[i+1] ? 0 : i + 1;
+      typing();
+    }
+
+    // 딜레이 기능 ( 마이크로초 )
+    function wait(ms) {
+      return new Promise(res => setTimeout(res, ms))
+    }
+
+    // 초기 실행
+    setTimeout(typing, 5000);
+  }
+}
+</script>
+
 <style lang="scss" scoped>
-html, body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  background: #fff;
-}
+@import '~/scss/var.scss';
 
-*, *::before, *::after {
-  box-sizing: border-box;
+.container {
+  padding: 100px 0;
 }
-
-.main {
-  text-align: center;
-  padding-top: 100px;
-}
-
-.hamburger {
-  position: relative;
-  width: 70px;
-  height: 70px;
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: space-between;
-  cursor: pointer;
-  padding: 20px;
-  
-  &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 20px;
-    background: #f953c6;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #da2287, #f953c6);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #da2287, #f953c6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    transform: rotate(0deg);
-    transition: all 0.4s cubic-bezier(0.54, -0.10, 0.57, 0.57);
+h1 {
+  font-family: $font--NotoSans;
+  font-weight: bold;
+  color:#191919;
+  font-size: 3em;
+  line-height: 1.43;
+  span::after {
+    content: '';
+    margin-left: .4rem;
+    border-right: 2px solid #191919;
+    animation: blink-caret .5s step-end infinite;
   }
-  
-  .hamburger-input {
-    position: absolute;
-    opacity: 0;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    cursor: pointer;
-  }
-  
-  .hamburger-line {
-    width: 100%;
-    background: #fff;
-    height: 2px;
-    display: block;
-    border-radius: 6px;
-    transition: transform 0.4s cubic-bezier(0.54, -0.81, 0.57, 0.57);
-    position: relative;
-    
-    &.first,
-    &.third {
-      width: 50%;
-    }
-    
-    &.third {
-      margin-left: 50%;
-      transform-origin: left;
-    }
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #191919 }
   }
 }
 
-.menu-button-wrapper {
-  position: relative;
-  display: inline-block;
-  
-  .item-list {
-    position: absolute;
-    top: 90px;
-    transform: translateX(-50%) scale(0);
-    transform-origin: center;
-    transition: all 0.4s cubic-bezier(0.54, -0.10, 0.57, 0.57);
-    background-color: #303242;
-    color: #fff;
-    width: 200px;
-    left: 50%;
-    padding: 15px 0;
-    text-align: left;
-    border-radius: 100px;
-    font-weight: 300;
-    opacity: 0;
-    user-select: none;
-    
-    div {
-      padding: 10px 30px;
-      cursor: pointer;
-    }
+@include media1204 {
+  .container {
+    padding: 50px 0;
   }
-  
-  .menu-button {
-    position: absolute;
-    width: 70px;
-    height: 70px;
-    left: 0;
-    z-index: 2;
-    opacity: 0;
-    cursor: pointer;
+  h1 {
+    font-size: 1.75em;
   }
 }
 
-.menu-button {
-  &:checked ~ .item-list {
-    transform: translateX(-50%) scale(1);
-    border-radius: 20px;
-    opacity: 1;
-    user-select: auto;
-  }  
-  
-  &:checked ~ .icon-wrapper .hamburger-line.second {
-    transform: rotate(-45deg); 
-  }
-
-  &:checked ~ .icon-wrapper .hamburger-line.first {
-    transform: translate(2px, 8px) rotate(-135deg);
-  }
-
-  &:checked ~ .icon-wrapper .hamburger-line.third {
-    transform: translate(11px, -3px) rotate(-135deg);
-  }
-  
-  &:checked ~ .icon-wrapper .hamburger:before {
-    transform: rotate(45deg);
+@include media890 {
+  h1 {
+    font-size: 1.5em;
+    text-align: center;
   }
 }
-
 </style>
