@@ -53,6 +53,9 @@
     }
     ul {
       text-align: center;
+      .company {
+        justify-content: center;
+      }
     }
   }
 }
