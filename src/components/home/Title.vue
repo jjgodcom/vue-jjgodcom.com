@@ -1,8 +1,8 @@
 <template>
-  <div class="container">
-    <h1>A Welcome to JJGODCOM world! 🖥️</h1>
-    <h1>Finding joy in front-end development!</h1>
-    <h1>: vue.js <span class="text"></span></h1>
+  <div class="container home-title scroll-spy">
+    <h1 class="delay-0">A Welcome to JJGODCOM world! 🖥️</h1>
+    <h1 class="delay-1">Finding joy in front-end development!</h1>
+    <h1 class="delay-2">: vue.js <span class="text"></span></h1>
   </div>
 </template>
 
@@ -66,7 +66,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '~/scss/var.scss';
-
+@import '~/scss/scrollSpy.scss';
 .container {
   padding: 100px 0;
 }

@@ -1,6 +1,6 @@
 <template>
   <!-- photo -->
-  <div class="photo">
+  <div class="photo about-photo scroll-spy">
     <!-- <vue-load-image>
       <template v-slot:image>
         <img src="../../assets/common/character.png" />
@@ -26,11 +26,13 @@ export default {
 
 <style lang="scss" scoped>
 @import '~/scss/var.scss';
+@import '~/scss/scrollSpy.scss';
+
 .photo{
   padding-bottom: 43%;
   background-image: url('../../assets/common/character.png');
   background-size: auto 51%;
-
+  
   img{
     width: 300px;
     display: block;

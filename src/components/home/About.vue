@@ -28,6 +28,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '~/scss/var.scss';
+@import '~/scss/scrollSpy.scss';
 .container {
   padding-top: 100px;
 }

@@ -1,6 +1,6 @@
 <template>
   <!-- Skills -->
-  <div class="skills">
+  <div class="skills about-skills scroll-spy">
     <p class="title">Skills & Tools :</p>
     <ul>
       <li 
@@ -70,6 +70,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '~/scss/var.scss';
+@import '~/scss/scrollSpy.scss';
 .skills {
   padding: 70px 0;
   border-bottom: 1px solid #ddd;

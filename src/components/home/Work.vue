@@ -1,5 +1,5 @@
 <template>
-  <div class="home-work">
+  <div class="home-work scroll-spy">
     <div class="container">
       <Title></Title>
       <Menu></Menu>
@@ -29,6 +29,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '~/scss/var.scss';
+@import '~/scss/scrollSpy.scss';
 .home-work {
   padding: 70px 0;
   background-color: #f8f8f8;

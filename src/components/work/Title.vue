@@ -16,6 +16,7 @@
 
 <style lang="scss" scoped>
 @import '~/scss/var.scss';
+
 .title {
   text-align: center;
   .text {

@@ -60,12 +60,12 @@ export default {
 }
 .v-enter-active,
 .v-leave-active {
-  transition: all 0.25s cubic-bezier(1, 0.5, 0.8, 1);
+  transition: all 0.25s cubic-bezier(1, 0.5, 0.8, 1) !important;
 }
 
 .v-enter-from,
 .v-leave-to {
-  transform: translateX(10px);
+  transform: translateX(10px) !important;
   opacity: 0.4;
 }
 

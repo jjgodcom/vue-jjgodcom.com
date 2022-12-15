@@ -1,5 +1,5 @@
 <template>
-  <div class="info">
+  <div class="info about-info scroll-spy">
     <div class="left-box">
       <h5>
         안녕하세요<br>
@@ -32,10 +32,13 @@
 
 <style lang="scss" scoped>
 @import '~/scss/var.scss';
+@import '~/scss/scrollSpy.scss';
+
 .info {
   padding: 70px 0;
   border-bottom: 1px solid #ddd;
   display: flex;
+  
   .left-box,
   .right-box {
     flex: 1;

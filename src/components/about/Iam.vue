@@ -1,6 +1,6 @@
 <template>
   <!-- iAm -->
-  <div class="iAm">
+  <div class="iAm about-iAm scroll-spy">
     <p class="title">I am :</p>
     <p class="text">
       20살 중반 떄 게임을 보며 '나도 저런 게임을 만들고 싶다.' 라고 생각하여 디자인 학원을 등록 했습니다. 
@@ -18,6 +18,7 @@
 
 <style lang="scss" scoped>
 @import '~/scss/var.scss';
+@import '~/scss/scrollSpy.scss';
 .iAm {
   padding: 70px 0;
   border-bottom: 1px solid #ddd;

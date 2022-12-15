@@ -1,6 +1,6 @@
 <template>
   <!-- Skills -->
-  <div class="career">
+  <div class="career about-career scroll-spy">
     <p class="title">Career :</p>
     <ul>
       <li>
@@ -17,6 +17,7 @@
 
 <style lang="scss" scoped>
 @import '~/scss/var.scss';
+@import '~/scss/scrollSpy.scss';
 .career {
   padding: 70px 0;
   .title {
