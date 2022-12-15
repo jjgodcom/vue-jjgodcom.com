@@ -41,3 +41,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.container {
+  padding-top: 80px;
+}
+</style>

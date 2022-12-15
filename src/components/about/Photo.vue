@@ -42,6 +42,7 @@ export default {
 @include media890 {
   .photo {
     margin: 0 auto;
+    background-size: auto 102%;
   }
 }
 </style>

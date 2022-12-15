@@ -1,32 +1,33 @@
 <template>
-  <!-- view -->
-  <div class="view">
-    <h2>View</h2>
-    <div class="image-box">
-      <vue-load-image> 
-        <template v-slot:image>
-          <img 
-            :src="this.getPortfolioInfo[0].image.default" 
-            :alt="this.getPortfolioInfo[0].title"
-            :title="this.getPortfolioInfo[0].title">
-        </template>
-        <template v-slot:preloader> 
-          <img src="https://raw.githubusercontent.com/john015/vue-load-image/master/example/image-loader.gif" />
-        </template>
-        <template v-slot:error> image load fails </template>
-      </vue-load-image>
-    </div>
+  <!-- info -->
+  <div class="info">
+    <h2>Info</h2>
+    <dl>
+      <dt>링크 :</dt>
+      <dd>
+        <a :href="this.getPortfolioInfo[0].link" target="_blank">
+          바로가기
+        </a>
+      </dd>
+    </dl>
+    <dl>
+      <dt>개발 기간 :</dt>
+      <dd>{{this.getPortfolioInfo[0].day}}</dd>
+    </dl>
+    <dl>
+      <dt>개발 언어 :</dt>
+      <dd>{{this.getPortfolioInfo[0].language}}</dd>
+    </dl>
+    <dl>
+      <dt>설명 :</dt>
+      <dd>{{this.getPortfolioInfo[0].description}}</dd>
+    </dl>
   </div>
-  <!-- /view -->
+  <!-- /info -->
 </template>
 
 <script>
-import VueLoadImage from 'vue-load-image'
-
 export default {
-  components: {
-    'vue-load-image': VueLoadImage
-  },
   props: {
     getPortfolioInfo: {
       type: Object,
@@ -38,17 +39,27 @@ export default {
 
 <style lang="scss" scoped>
 @import '~/scss/var.scss';
-.view {
+.info {
+  padding-bottom: 50px;
   h2 {
     color:#191919;
     font-family: $font--Russo;
     padding-bottom: 20px;
   }
-  .image-box {
-    width: 100%;
-    border: 1px solid #ccc;
-    img {
-      width: 100%;
+  dl {
+    display: flex;
+    font-family: $font--NotoSans;
+    line-height: 1.63;
+    dt {
+      color:#999;
+      width: 80px;
+      margin-right: 10px;
+    }
+    dd {
+      color:#333;
+      a {
+        color:#6b60e5;
+      }
     }
   }
 }
