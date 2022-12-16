@@ -21,33 +21,47 @@ export default {
       // title : 이름
       // type : work메뉴 클릭시 분류될거
       // image : 이미지
-      // memo : 현상황 메모 나중에 지워야함
+      // url : page 가 note일 경우 url 이동
 
       // Reference
       {
-        page:'setting',
+        page:'note',
         title:'Setting',
         type:'Reference',
         image:require('assets/work/reference/setting.png').default,
-        memo:''
+        url:'https://ten-wax-7f1.notion.site/Setting-0cc72bfd19c5400da4b0faf3d4d5af7b'
       },
       {
-        page:'reference',
-        title:'Reference',
+        page:'note',
+        title:'Site',
         type:'Reference',
-        image:require('assets/work/reference/reference.png').default,
-        memo:''
+        image:require('assets/work/reference/site.png').default,
+        url:'https://ten-wax-7f1.notion.site/Site-bde716a205a941e09859535b5dd917ca'
       },
       {
-        page:'vscode',
+        page:'note',
+        title:'Css',
+        type:'Reference',
+        image:require('assets/work/reference/css.png').default,
+        url:'https://ten-wax-7f1.notion.site/Css-34a3fb32d0cb40c3ba46ebaac8305d93'
+      },
+      {
+        page:'note',
+        title:'Js',
+        type:'Reference',
+        image:require('assets/work/reference/js.png').default,
+        url:'https://ten-wax-7f1.notion.site/Js-658506297a0e4634a0134c69f1d2b2cd'
+      },
+      {
+        page:'note',
         title:'VSCode',
         type:'Reference',
         image:require('assets/work/reference/vscode.png').default,
-        memo:''
+        url:'https://ten-wax-7f1.notion.site/VSCode-503bb5b37a334de7a638357582641f8e'
       },
       // HTML
       {
-        page:'html',
+        page:'note',
         title:'HTML',
         type:'HTML',
         image:require('assets/work/html/html.png').default,
@@ -55,99 +69,99 @@ export default {
       },
       // CSS
       {
-        page:'css',
+        page:'note',
         title:'CSS',
         type:'CSS',
         image:require('assets/work/css/css.png').default,
-        memo:''
+        url:''
       },
       {
-        page:'scss',
+        page:'note',
         title:'Scss',
         type:'CSS',
         image:require('assets/work/css/scss.png').default,
-        memo:''
+        url:''
       },
       // Java
       {
-        page:'javaScript',
+        page:'note',
         title:'JavaScript',
         type:'Java',
         image:require('assets/work/java/javascript.png').default,
-        memo:''
+        url:''
       },
       {
-        page:'jQuery',
+        page:'note',
         title:'jQuery',
         type:'Java',
         image:require('assets/work/java/jquery.png').default,
-        memo:''
+        url:''
       },
       {
-        page:'regEx',
+        page:'note',
         title:'정규식',
         type:'Java',
         image:require('assets/work/java/regex.png').default,
-        memo:''
+        url:''
       },
       {
-        page:'node',
+        page:'note',
         title:'Node.js',
         type:'Java',
         image:require('assets/work/java/node.png').default,
-        memo:''
+        url:''
       },
       {
-        page:'vue',
+        page:'note',
         title:'Vue.js',
         type:'Java',
         image:require('assets/work/java/vue.png').default,
-        memo:''
+        url:''
       },
       // Bundler
       {
-        page:'parcel',
+        page:'note',
         title:'Parcel',
         type:'Bundler',
         image:require('assets/work/bundler/parcel.png').default,
-        memo:''
+        url:''
       },
       {
-        page:'webPack',
+        page:'note',
         title:'WebPack',
         type:'Bundler',
         image:require('assets/work/bundler/webpack.png').default,
-        memo:''
+        url:''
       },
       // DB
       {
-        page:'oracle',
+        page:'note',
         title:'Oracle',
         type:'DB',
         image:require('assets/work/db/oracle.png').default,
-        memo:''
+        url:''
       },
       {
-        page:'mysql',
+        page:'note',
         title:'MySQL',
         type:'DB',
         image:require('assets/work/db/mysql.png').default,
-        memo:''
+        url:''
       },
       // Git 
       {
-        page:'git',
+        page:'note',
         title:'Git',
         type:'Git',
         image:require('assets/work/git/git.png').default,
-        memo:''
+        url:''
       },
       {
-        page:'markdown',
+        page:'note',
         title:'Markdown(.md)',
         type:'Git',
         image:require('assets/work/git/md.png').default,
-        memo:''
+        url:''
       },
       // portfolio
       {

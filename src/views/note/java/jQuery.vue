@@ -1,3 +1,0 @@
-<template>
-  jq
-</template>

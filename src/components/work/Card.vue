@@ -1,14 +1,28 @@
 <template>
-  <RouterLink :to="{name: list.page, params: {title: list.title}}">
-    <div class="card"> 
-      <div class="bg"></div>
-      <div class="border-box"></div>
-      <div class="text-box">
-        <div class="text">{{list.title}}</div>
+  <template v-if="list.page === 'note'">
+    <a :href="list.url" target="_blank">
+      <div class="card"> 
+        <div class="bg"></div>
+        <div class="border-box"></div>
+        <div class="text-box">
+          <div class="text">{{list.title}}</div>
+        </div>
+        <div class="image-box" :style="{ backgroundImage : `url(${list.image})`}"></div>
       </div>
-      <div class="image-box" :style="{ backgroundImage : `url(${list.image})`}"></div>
-    </div>
-  </RouterLink>
+    </a>
+  </template>
+  <template v-else-if="list.page === 'portfolio'">
+    <RouterLink :to="{name: list.page, params: {title: list.title}}"> 
+      <div class="card"> 
+        <div class="bg"></div>
+        <div class="border-box"></div>
+        <div class="text-box">
+          <div class="text">{{list.title}}</div>
+        </div>
+        <div class="image-box" :style="{ backgroundImage : `url(${list.image})`}"></div>
+      </div>
+    </RouterLink>
+  </template>
 </template>
 
 <script>
@@ -18,6 +32,9 @@ export default {
       type: Object,
       default: undefined,
     }
+  },
+  mounted(){
+    console.log(this.list.page);
   }
 }
 </script> 
