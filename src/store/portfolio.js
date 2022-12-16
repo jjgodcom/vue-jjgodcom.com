@@ -10,7 +10,7 @@ export default {
         day:'2022년 10월 25일 ~ 개발중',
         language:'HTML, Scss, Javascript, Vue.js',
         description:'Vue를 기반으로한 포트폴리오겸 세번째 블로그 입니다.',
-        image:require('assets/common/logo.png')
+        image:require('assets/portfolio/jjgodcom-vue.png')
       },
       {
         title:'jjgodcom.com-ftp',
