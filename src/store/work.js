@@ -73,14 +73,14 @@ export default {
         title:'CSS',
         type:'CSS',
         image:require('assets/work/css/css.png').default,
-        url:''
+        url:'https://ten-wax-7f1.notion.site/CSS-246bec3114924e0b84e1e1fd8b3c3f55'
       },
       {
         page:'note',
         title:'Scss',
         type:'CSS',
         image:require('assets/work/css/scss.png').default,
-        url:''
+        url:'https://ten-wax-7f1.notion.site/SCSS-88ffbe958d2743df9dbe07c497b86ffe'
       },
       // Java
       {
