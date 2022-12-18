@@ -88,35 +88,35 @@ export default {
         title:'JavaScript',
         type:'Java',
         image:require('assets/work/java/javascript.png').default,
-        url:''
-      },
-      {
-        page:'note',
-        title:'jQuery',
-        type:'Java',
-        image:require('assets/work/java/jquery.png').default,
-        url:''
+        url:'https://ten-wax-7f1.notion.site/JavaScript-38a5c43bb231419e97024c43285116ec'
       },
       {
         page:'note',
         title:'정규식',
         type:'Java',
         image:require('assets/work/java/regex.png').default,
-        url:''
+        url:'https://ten-wax-7f1.notion.site/884362a3dc6341f6ad4a892ac8cf2692'
+      },
+      {
+        page:'note',
+        title:'jQuery',
+        type:'Java',
+        image:require('assets/work/java/jquery.png').default,
+        url:'https://ten-wax-7f1.notion.site/jQuery-f5768d4c887b4d4b9231ec4d0b84aa5b'
       },
       {
         page:'note',
         title:'Node.js',
         type:'Java',
         image:require('assets/work/java/node.png').default,
-        url:''
+        url:'https://ten-wax-7f1.notion.site/Node-js-edd4b65b6f1b4f1095bfec45e0b420e2'
       },
       {
         page:'note',
         title:'Vue.js',
         type:'Java',
         image:require('assets/work/java/vue.png').default,
-        url:''
+        url:'https://ten-wax-7f1.notion.site/Vue-js-d7d6f755ad4241559ef8397ced08ca10'
       },
       // Bundler
       {
