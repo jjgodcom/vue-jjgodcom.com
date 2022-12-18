@@ -65,7 +65,7 @@ export default {
         title:'HTML',
         type:'HTML',
         image:require('assets/work/html/html.png').default,
-        memo:'a'
+        url:'https://ten-wax-7f1.notion.site/HTML-f2ad71e6a4f14ee0860d4793b9912405'
       },
       // CSS
       {
