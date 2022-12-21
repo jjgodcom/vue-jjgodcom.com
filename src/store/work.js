@@ -139,14 +139,14 @@ export default {
         title:'Oracle',
         type:'DB',
         image:require('assets/work/db/oracle.png').default,
-        url:''
+        url:'https://ten-wax-7f1.notion.site/Oracle-270e57927fa74c3da5e7f1f8c630a29d'
       },
       {
         page:'note',
         title:'MySQL',
         type:'DB',
         image:require('assets/work/db/mysql.png').default,
-        url:''
+        url:'https://ten-wax-7f1.notion.site/MySQL-c16e66fcc7364e2d8a9f76b6db8f26d7'
       },
       // Git 
       {
