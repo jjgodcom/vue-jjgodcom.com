@@ -124,14 +124,14 @@ export default {
         title:'Parcel',
         type:'Bundler',
         image:require('assets/work/bundler/parcel.png').default,
-        url:''
+        url:'https://ten-wax-7f1.notion.site/Parcel-a4d1da4800f444f8af3f1b92e17c2398'
       },
       {
         page:'note',
         title:'WebPack',
         type:'Bundler',
         image:require('assets/work/bundler/webpack.png').default,
-        url:''
+        url:'https://ten-wax-7f1.notion.site/WebPack-b4e4b38a180f4f66b07f9d46d20160d4'
       },
       // DB
       {
