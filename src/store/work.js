@@ -154,14 +154,14 @@ export default {
         title:'Git',
         type:'Git',
         image:require('assets/work/git/git.png').default,
-        url:''
+        url:'https://ten-wax-7f1.notion.site/Git-32ae4ccd384b41f68cd9cdfd4d98c657'
       },
       {
         page:'note',
         title:'Markdown(.md)',
         type:'Git',
         image:require('assets/work/git/md.png').default,
-        url:''
+        url:'https://ten-wax-7f1.notion.site/Markdown-md-61ccded703bf46038ddaf05c3186868b'
       },
       // portfolio
       {

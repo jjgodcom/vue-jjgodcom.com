@@ -18,6 +18,14 @@
       <dt>개발 언어 :</dt>
       <dd>{{this.getPortfolioInfo[0].language}}</dd>
     </dl>
+    <dl v-if="this.getPortfolioInfo[0].works.length > 0">
+      <dt>담당 업무 : </dt>
+      <dd>
+        <ul v-for="work in this.getPortfolioInfo[0].works" :key="work">
+          <li>- {{work}}</li>
+        </ul>
+      </dd>
+    </dl>
     <dl>
       <dt>설명 :</dt>
       <dd>{{this.getPortfolioInfo[0].description}}</dd>
