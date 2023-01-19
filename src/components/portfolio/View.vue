@@ -46,7 +46,6 @@ export default {
   }
   .image-box {
     width: 100%;
-    border: 1px solid #ccc;
     img {
       width: 100%;
     }

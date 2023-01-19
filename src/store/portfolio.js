@@ -62,6 +62,29 @@ export default {
         image:require('assets/portfolio/jjgodcom-2018.png')
       },
       {
+        title:'아이디어콘서트',
+        link:'http://www.ideaconcert.com',
+        language:'HTML, CSS, Javascript, jQuery, MySQL, Spring',
+        works:[
+                '디자인 작업 (10%) - 반응형 디자인이 없어 임의로 진행함',
+                '사용자 페이지(HTML) 개발 (100%)'
+              ],
+        description:'언제나 즐거운 상상으로 새로운 콘텐츠와 문화기술을 만드는 아이디어콘서트 회사의 방향성을 홍보하기 위해 제작 하였습니다.',
+        image:require('assets/portfolio/ideaconcert.png')
+      },
+      {
+        title:'jjgodcom.com-2018',
+        link:'TEST',
+        language:'HTML, CSS, Javascript, jQuery',
+        works:[
+                '디자인 작업 (100%)',
+                '사용자 페이지(HTML) 개발 (100%)'
+              ],
+        description:'처음으로 개발을 접하고 도메인을 구매하여 만든 블로그 입니다.',
+        image:require('assets/portfolio/jjgodcom-2018.png')
+      },
+
+      {
         title:'Webstandard',
         link:'https://web.archive.org/web/20180821032038/http://jjgodcom.com/web/index.html',
         language:'HTML, CSS',

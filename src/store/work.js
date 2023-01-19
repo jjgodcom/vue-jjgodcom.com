@@ -202,12 +202,6 @@ export default {
       },
       {
         page:'portfolio',
-        title:'버스 예매',
-        type:'Protfolio',
-        image:require('assets/work/portfolio/bus.png').default,
-      },
-      {
-        page:'portfolio',
         title:'아이디어콘서트',
         type:'Protfolio',
         image:require('assets/work/portfolio/ideaconcert.png').default,
