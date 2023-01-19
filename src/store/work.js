@@ -169,63 +169,126 @@ export default {
         title:'jjgodcom.com-Vue',
         type:'Protfolio',
         image:require('assets/work/portfolio/vue.png').default,
-        memo:'썸네일+이미지 해야함'
       },
       {
         page:'portfolio',
         title:'jjgodcom.com-ftp',
         type:'Protfolio',
         image:require('assets/work/portfolio/ftp.png').default,
-        memo:'썸네일 해야함'
       },
       {
         page:'portfolio',
         title:'Movie Search',
         type:'Protfolio',
         image:require('assets/work/portfolio/movie.png').default,
-        memo:'썸네일 해야함'
-      },
-      {
-        page:'portfolio',
-        title:'Overwatch',
-        type:'Protfolio',
-        image:require('assets/work/portfolio/overwatch.png').default,
-        memo:'썸네일 해야함'
       },
       {
         page:'portfolio',
         title:'Starbucks',
         type:'Protfolio',
         image:require('assets/work/portfolio/starbucks.png').default,
-        memo:'썸네일 해야함'
+      },
+      {
+        page:'portfolio',
+        title:'Overwatch',
+        type:'Protfolio',
+        image:require('assets/work/portfolio/overwatch.png').default,
       },
       {
         page:'portfolio',
         title:'jjgodcom.com-2018',
         type:'Protfolio',
         image:require('assets/work/portfolio/2018.png').default,
-        memo:'썸네일 해야함'
+      },
+      {
+        page:'portfolio',
+        title:'버스 예매',
+        type:'Protfolio',
+        image:require('assets/work/portfolio/bus.png').default,
+      },
+      {
+        page:'portfolio',
+        title:'아이디어콘서트',
+        type:'Protfolio',
+        image:require('assets/work/portfolio/ideaconcert.png').default,
+      },
+      {
+        page:'portfolio',
+        title:'디어맨',
+        type:'Protfolio',
+        image:require('assets/work/portfolio/deaman.png').default,
+      },
+      {
+        page:'portfolio',
+        title:'마크맨',
+        type:'Protfolio',
+        image:require('assets/work/portfolio/markman.png').default,
+      },
+      {
+        page:'portfolio',
+        title:'문라이트',
+        type:'Protfolio',
+        image:require('assets/work/portfolio/moonlight.png').default,
+      },
+      {
+        page:'portfolio',
+        title:'스팅',
+        type:'Protfolio',
+        image:require('assets/work/portfolio/sting.png').default,
+      },
+      {
+        page:'portfolio',
+        title:'자인맨',
+        type:'Protfolio',
+        image:require('assets/work/portfolio/signman.png').default,
+      },
+      {
+        page:'portfolio',
+        title:'투니비 라이트',
+        type:'Protfolio',
+        image:require('assets/work/portfolio/toonivie-lite.png').default,
+      },
+      {
+        page:'portfolio',
+        title:'투니비 저작툴',
+        type:'Protfolio',
+        image:require('assets/work/portfolio/toonivie-tool.png').default,
+      },
+      {
+        page:'portfolio',
+        title:'투니비 플랫폼',
+        type:'Protfolio',
+        image:require('assets/work/portfolio/toonivie-platform.png').default,
+      },
+      {
+        page:'portfolio',
+        title:'투니비 플랫폼 2019',
+        type:'Protfolio',
+        image:require('assets/work/portfolio/toonivie-platform2019.png').default,
+      },
+      {
+        page:'portfolio',
+        title:'키즈페이',
+        type:'Protfolio',
+        image:require('assets/work/portfolio/kidspay.png').default,
       },
       {
         page:'portfolio',
         title:'Webstandard',
         type:'Protfolio',
         image:require('assets/work/portfolio/webstandard.png').default,
-        memo:'썸네일 해야함'
       },
       {
         page:'portfolio',
         title:'Hynix',
         type:'Protfolio',
         image:require('assets/work/portfolio/hynix.png').default,
-        memo:'썸네일 해야함'
       },
       {
         page:'portfolio',
         title:'경주월드',
         type:'Protfolio',
         image:require('assets/work/portfolio/world.png').default,
-        memo:'썸네일 해야함'
       }
     ]
   }),

@@ -11,10 +11,6 @@
       </dd>
     </dl>
     <dl>
-      <dt>개발 기간 :</dt>
-      <dd>{{this.getPortfolioInfo[0].day}}</dd>
-    </dl>
-    <dl>
       <dt>개발 언어 :</dt>
       <dd>{{this.getPortfolioInfo[0].language}}</dd>
     </dl>
