@@ -17,8 +17,10 @@
     <dl v-if="this.getPortfolioInfo[0].works.length > 0">
       <dt>담당 업무 : </dt>
       <dd>
-        <ul v-for="work in this.getPortfolioInfo[0].works" :key="work">
-          <li>- {{work}}</li>
+        <ul>
+          <template v-for="work in this.getPortfolioInfo[0].works" :key="work">
+            <li>- {{work}}</li>
+          </template>
         </ul>
       </dd>
     </dl>
@@ -52,14 +54,20 @@ export default {
   }
   dl {
     display: flex;
+    flex:1;
     font-family: $font--NotoSans;
     line-height: 1.63;
+    margin-bottom: 10px;
     dt {
+      display: flex;
+      flex:none;
       color:#999;
       width: 80px;
       margin-right: 10px;
     }
     dd {
+      display: flex;
+      flex: 1;
       color:#333;
       a {
         color:#6b60e5;
