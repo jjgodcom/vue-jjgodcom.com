@@ -5,9 +5,14 @@
     <dl>
       <dt>링크 :</dt>
       <dd>
-        <a :href="this.getPortfolioInfo[0].link" target="_blank">
-          바로가기
-        </a>
+        <template v-if="this.getPortfolioInfo[0].link === ''">
+          <span>도메인 만료</span>
+        </template>
+        <template v-else>
+          <a :href="this.getPortfolioInfo[0].link" target="_blank">
+            바로가기 
+          </a>
+        </template>
       </dd>
     </dl>
     <dl>
@@ -29,7 +34,7 @@
       <dd>{{this.getPortfolioInfo[0].description}}</dd>
     </dl>
   </div>
-  <!-- /info -->
+  <!-- /info --> 
 </template>
 
 <script>
@@ -71,6 +76,10 @@ export default {
       color:#333;
       a {
         color:#6b60e5;
+      }
+      span {
+        color: #999;
+        text-decoration: line-through;
       }
     }
   }

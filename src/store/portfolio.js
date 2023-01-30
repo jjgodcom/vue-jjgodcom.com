@@ -73,14 +73,13 @@ export default {
         image:require('assets/portfolio/ideaconcert.png')
       },
       {
-        title:'jjgodcom.com-2018',
-        link:'TEST',
-        language:'HTML, CSS, Javascript, jQuery',
+        title:'디어맨',
+        link:'',
+        language:'HTML, CSS, Javascript, jQuery, MySQL, Spring',
         works:[
-                '디자인 작업 (100%)',
                 '사용자 페이지(HTML) 개발 (100%)'
               ],
-        description:'처음으로 개발을 접하고 도메인을 구매하여 만든 블로그 입니다.',
+        description:'아이디어 등록, 변리사 매칭, 특허 출원 신청까지 한번에 해결해주는 특허출원 도움 사이트 입니다.',
         image:require('assets/portfolio/jjgodcom-2018.png')
       },
 
