@@ -49,10 +49,19 @@ export default {
   .image-box {
     width: 100%;
     img {
-      width: 100%;
+      width: 60%;
       margin-top: 10px;
       &:nth-child(1) {
         margin-top: 0;
+      }
+    }
+  }
+}
+@include media1440 {
+  .view {
+    .image-box {
+      img {
+        width: 100%;
       }
     }
   }
