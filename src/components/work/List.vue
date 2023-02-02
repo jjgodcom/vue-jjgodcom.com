@@ -72,7 +72,7 @@ export default {
 
 .list {
   .item {
-    width: calc(20% - 8px);
+    width: calc(16.66% - 8px);
     margin-bottom: 8px;
   }
 }
