@@ -1,3 +1,5 @@
+![JJGODCOM](http://jjgodcom.com/resources/images/global/logo.png)
+
 # Vue3 템플릿 with Webpack
 
 ## Versions
