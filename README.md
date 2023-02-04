@@ -1,104 +1,118 @@
-![JJGODCOM](http://jjgodcom.com/resources/images/global/logo.png)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9f2f756f-e1fc-48d9-9c07-b7d7433d8aaa/deploy-status)](https://jjgodcom-vue.netlify.app/#/)
 
-# Vue3 템플릿 with Webpack
+# <img src="https://raw.githubusercontent.com/jjgodcom/vue-jjgodcom.com/master/src/assets/common/logo.png" alt="logo" width="29" /> JJGODCOM 블로그 - Vue.js
 
-## Versions
+개발하면서 자주 사용하는 자료들을 모아둔 블로그 겸 포트폴리오 사이트 입니다.<br/>
 
-- [Default](https://github.com/ParkYoungWoong/vue3-webpack-template/tree/master)<br>
-- [+ESLint](https://github.com/ParkYoungWoong/vue3-webpack-template/tree/eslint)<br>
-- [+ESLint+Vuex](https://github.com/ParkYoungWoong/vue3-webpack-template/tree/vuex)<br>
-- [+ESLint+Vuex+VueRouter](https://github.com/ParkYoungWoong/vue3-webpack-template/tree/vue-router)<br>
+![JJGODCOM](https://raw.githubusercontent.com/jjgodcom/vue-jjgodcom.com/master/src/assets/common/thumbnail.png)
 
-## Installation
+⬇ 아래 링크는 이전에 사용한 블로그 입니다. ⬆
+- [jjgodcom - ftp](https://jjgodcom-ftp.netlify.app/) <br/>
+- [jjgodcom - 2018](https://web.archive.org/web/20180805230657/http://jjgodcom.com/)
 
-```bash
-# Default.
-$ npx degit ParkYoungWoong/vue3-webpack-template DIRECTORY_NAME
+## ✒️ 오픈 그래프(The Open Graph protocol)
+웹페이지가 소셜 미디어(페이스북 등)로 공유될 때 우선적으로 활용되는 정보를 지정합니다.
 
-# With ESLint, Add `#eslint`.
-$ npx degit ParkYoungWoong/vue3-webpack-template#eslint DIRECTORY_NAME
+실제 적용된 KakaoTalk -
 
-# With ESLint + Vuex, Add `#vuex`.
-$ npx degit ParkYoungWoong/vue3-webpack-template#vuex DIRECTORY_NAME
+![JJGODCOM](https://raw.githubusercontent.com/jjgodcom/vue-jjgodcom.com/master/src/assets/common/kakao.PNG)
 
-# With ESLint + Vuex + VueRouter, Add `#vue-router`.
-$ npx degit ParkYoungWoong/vue3-webpack-template#vue-router DIRECTORY_NAME
+실제 적용된 og & twitter 속성
 
-# Start!
-$ cd DIRECTORY_NAME
-$ npm i
-$ npm run dev
+```html
+<!-- og -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="jjgodcom.com-vue" />
+<meta property="og:title" content="jjgodcom.com-vue" />
+<meta property="og:description" content="개발 관련 정보 공유 사이트 입니다." />
+<meta property="og:image" content="https://raw.githubusercontent.com/jjgodcom/vue-jjgodcom.com/master/src/assets/common/og_kakao.png" />
+<meta property="og:url" content="https://jjgodcom-vue.netlify.app/#/" />
+
+<!-- twitter --> 
+<meta property="twitter:card" content="summary" />
+<meta property="twitter:site" content="jjgodcom.com-vue" />
+<meta property="twitter:title" content="jjgodcom.com-vue" />
+<meta property="twitter:description" content="개발 관련 정보 공유 사이트 입니다." />
+<meta property="twitter:image" content="https://raw.githubusercontent.com/jjgodcom/vue-jjgodcom.com/master/src/assets/common/og_kakao.png" />
+<meta property="twitter:url" content="https://jjgodcom-vue.netlify.app/#/" />
 ```
 
-## Specs
+- `og:type`: 페이지의 유형(E.g, `website`, `video.movie`)
+- `og:site_name`: 속한 사이트의 이름
+- `og:title`: 페이지의 이름(제목)
+- `og:description`: 페이지의 간단한 설명
+- `og:image`: 페이지의 대표 이미지 주소(URL)
+- `og:url`: 페이지 주소(URL)
 
-- Vue3
-- Webpack
-- SCSS
-- Babel
-- PostCSS
-- Autoprefixer
-- ESLint __(+ESLint)__
-- Vuex __(+Vuex)__
-- Vue Router __(+VueRouter)__
+## ✒️ Favicon(파비콘, favorites icon)
+웹페이지를 나타내는 아이콘, 웹페이지의 로고를 설정합니다.<br>
+대부분의 경우 루트 경로에 `favicon.ico` 파일을 위치하면 자동으로 로딩하기 때문에 `<link />` 를 작성할 필요가 없습니다.
 
-## Packages
+> 파비콘 이미지는 루트 경로에 있어야 합니다! <br>
+> `해당 프로젝트는 static 폴더에 favicon.ico 파일을 넣어야 적용 됩니다!`
 
-__webpack__: 모듈(패키지) 번들러의 핵심 패키지<br>
-__webpack-cli__: 터미널에서 Webpack 명령(CLI)을 사용할 수 있음<br>
-__webpack-dev-server__: 개발용으로 Live Server를 실행(HMR)<br>
+실제 적용한 favicon
 
-__html-webpack-plugin__: 최초 실행될 HTML 파일(템플릿)을 연결<br>
-__copy-webpack-plugin__: 정적 파일(파비콘, 이미지 등)을 제품(`dist`) 폴더로 복사<br>
+<img src="https://raw.githubusercontent.com/jjgodcom/vue-jjgodcom.com/master/src/assets/common/logo.png" alt="logo" width="100" />
 
-__sass-loader__: SCSS(Sass) 파일을 로드<br>
-__postcss-loader__: PostCSS(Autoprefixer)로 스타일 파일을 처리<br>
-__css-loader__: CSS 파일을 로드<br>
-__style-loader__: 로드된 스타일(CSS)을 `<style>`로 `<head>`에 삽입<br>
-__babel-loader__: JS 파일을 로드<br>
-__vue-loader__: Vue 파일을 로드<br>
-__vue-style-loader__: Vue 파일의 로드된 스타일(CSS)을 `<style>`로 `<head>`에 삽입<br>
-__file-loader__: 지정된 파일(이미지)을 로드<br>
-
-__@babel/core__: ES6 이상의 코드를 ES5 이하 버전으로 변환<br>
-__@babel/preset-env__: Babel 지원 스펙을 지정<br>
-__@babel/plugin-transform-runtime__: Async/Await 문법 지원<br>
-
-__sass__: SCSS(Sass) 문법을 해석(스타일 전처리기)<br>
-__postcss__: Autoprefixer 등의 다양한 스타일 후처리기 패키지<br>
-__autoprefixer__: 스타일에 자동으로 공급 업체 접두사(Vendor prefix)를 적용하는 PostCSS의 플러그인<br>
-
-__vue__: Vue.js 프레임워크<br>
-__@vue/compiler-sfc__: .vue 파일(SFC, 3버전)을 해석<br>
-
-__eslint__: 정적 코드 분석 도구 __(+ESLint)__<br>
-__eslint-plugin-vue__: Vue.js 코드 분석 __(+ESLint)__<br>
-__babel-eslint__: ES6 이상의 코드(Babel)를 분석 __(+ESLint)__<br>
-
-__vuex__: 중앙 집중식 저장소 __(+Vuex)__<br>
-__vue-router__: 라우터 __(+VueRouter)__<br>
-
-## 주의사항!
-
-- `npm i vue@next`로 설치(3버전)
-- `npm i vue-loader@next`로 설치(3버전)
-- `npm i -D webpack-dev-server@next`로 설치(webpack-cli 버전(@4^)과 일치)!<br>
-- `package.json` 옵션으로 `browserslist` 추가!<br>
-- `.postcssrc.js` 생성(PostCSS 구성 옵션)!<br>
-- `.babelrc.js` 생성(Babel 구성 옵션)!<br>
-- `.eslintrc.js` 생성(ESLint 구성 옵션)! __(+ESLint)__<br>
-
-## ESLint Auto fix on save for VSCode
-
-- 모든 명령 표시(Windows: `Ctrl`+`Shift`+`P` / macOS: `Cmd`+`Shift`+`P`)
-- 모든 명령 표시에서 `settings` 검색
-- `Preferences: Open Settings (JSON)` 선택
-- 오픈된 `settings.json`파일에서 아래 코드 추가 및 저장
-
-```json
-{
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  }
-}
+```html
+<!--<link rel="shortcut icon" href="favicon.ico" />-->
+<link rel="icon" href="./favicon.png" />
 ```
+
+- `favicon.ico` 64 x 64 (px) 또는 32 x 32 또는 16 x 16
+- `favicon.png` 500 x 500 (px)
+
+### 📌 .ico 파일 제작
+아래 사이트에서 이미지를 업로드하면 손쉽게 `.ico` 파일을 제작할 수 있습니다.
+
+[iconifier.net](https://iconifier.net/)
+
+## ✒️ Reset.css
+
+각 브라우저의 기본 스타일을 초기화합니다.
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+```
+
+## ✒️ Fonts
+
+해당 프로젝트에서는 [Google Fonts](https://fonts.google.com/)에서 제공하는 2개의 폰트를 사용했습니다.
+
+```html
+<!-- web font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Russo+One&display=swap" rel="stylesheet">
+```
+```scss
+// scss 에 선언하세요!
+$font--Russo: 'Russo One', sans-serif;
+$font--NotoSans: 'Noto Sans KR', sans-serif;
+```
+
+## ✒️ GSAP & ScrollToPlugin
+
+[GSAP(The GreenSock Animation Platform)](https://greensock.com/gsap/)은 자바스크립트로 제어하는 타임라인 기반의 애니메이션 라이브러리입니다.
+[ScrollToPlugin](https://greensock.com/scrolltoplugin/)은 스크롤 애니메이션을 지원하는 GSAP 플러그인입니다.
+
+> `해당 프로젝트에서는 npm 으로 설치함!`
+
+적용된 코드 예제는 [이곳](https://github.com/jjgodcom/vue-jjgodcom.com/blob/master/src/components/common/ToTop.vue) 을 참고하세요!
+
+## ✒️ ScrollMagic
+
+[ScrollMagic](https://github.com/janpaepke/ScrollMagic)은 스크롤과 요소의 상호 작용을 위한 자바스크립트 라이브러리입니다.<br>
+대표적으로 어떤 요소가 현재 화면에 보이는 상태인지를 확인할 때 사용합니다.
+
+[ScrollMagic API](http://scrollmagic.io/docs/)
+
+> `해당 프로젝트에서는 npm 으로 설치함!`
+
+적용된 코드 예제는 [이곳](https://github.com/jjgodcom/vue-jjgodcom.com/blob/master/src/views/Home.vue) 을 참고하세요!
+
+## ✒️ vue 프로젝트 기본 세팅
+항상 개발할때마다 느끼지만 초기 프로젝트 세팅이 제일 어렵다.<br>
+해당 프로젝트는 [이곳](https://github.com/ParkYoungWoong/vue3-webpack-template/tree/vue-router) 에서 clone을 받아서 개발을 시작했습니다.
