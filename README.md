@@ -2,11 +2,11 @@
 
 # <img src="https://raw.githubusercontent.com/jjgodcom/vue-jjgodcom.com/master/src/assets/common/logo.png" alt="logo" width="29" /> JJGODCOM 블로그 - Vue.js
 
-개발하면서 자주 사용하는 자료들을 모아둔 블로그 겸 포트폴리오 사이트 입니다.<br/>
+개발하면서 자주 사용하는 자료들을 모아둔 블로그 겸 포트폴리오 사이트입니다.<br/>
 
 ![JJGODCOM](https://raw.githubusercontent.com/jjgodcom/vue-jjgodcom.com/master/src/assets/common/thumbnail.png)
 
-⬇ 아래 링크는 이전에 사용한 블로그 입니다. ⬆
+⬇ 아래 링크는 이전에 사용한 블로그입니다. ⬇
 - [jjgodcom - ftp](https://jjgodcom-ftp.netlify.app/) <br/>
 - [jjgodcom - 2018](https://web.archive.org/web/20180805230657/http://jjgodcom.com/)
 
@@ -49,7 +49,7 @@
 대부분의 경우 루트 경로에 `favicon.ico` 파일을 위치하면 자동으로 로딩하기 때문에 `<link />` 를 작성할 필요가 없습니다.
 
 > 파비콘 이미지는 루트 경로에 있어야 합니다! <br>
-> `해당 프로젝트는 static 폴더에 favicon.ico 파일을 넣어야 적용 됩니다!`
+> `해당 프로젝트는 static 폴더에 favicon.ico 파일을 넣어야 적용됩니다!`
 
 실제 적용한 favicon
 
@@ -114,5 +114,5 @@ $font--NotoSans: 'Noto Sans KR', sans-serif;
 적용된 코드 예제는 [이곳](https://github.com/jjgodcom/vue-jjgodcom.com/blob/master/src/views/Home.vue) 을 참고하세요!
 
 ## ✒️ vue 프로젝트 기본 세팅
-항상 개발할때마다 느끼지만 초기 프로젝트 세팅이 제일 어렵다.<br>
+항상 개발할 때마다 느끼지만 초기 프로젝트 세팅이 제일 어렵다.<br>
 해당 프로젝트는 [이곳](https://github.com/ParkYoungWoong/vue3-webpack-template/tree/vue-router) 에서 clone을 받아서 개발을 시작했습니다.
