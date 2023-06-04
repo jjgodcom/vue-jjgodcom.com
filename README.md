@@ -2,6 +2,8 @@
 
 # <img src="https://raw.githubusercontent.com/jjgodcom/vue-jjgodcom.com/master/src/assets/common/logo.png" alt="logo" width="29" /> JJGODCOM 블로그 - Vue.js
 
+- [jjgodcom - vue](https://jjgodcom-vue.netlify.app/) <br/>
+
 개발하면서 자주 사용하는 자료들을 모아둔 블로그 겸 포트폴리오 사이트입니다.<br/>
 
 ![JJGODCOM](https://raw.githubusercontent.com/jjgodcom/vue-jjgodcom.com/master/src/assets/common/thumbnail.png)
