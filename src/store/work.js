@@ -184,6 +184,12 @@ export default {
       },
       {
         page:'portfolio',
+        title:'shopping-shop',
+        type:'Protfolio',
+        image:require('assets/work/portfolio/shopping-shop.png').default,
+      },
+      {
+        page:'portfolio',
         title:'Starbucks',
         type:'Protfolio',
         image:require('assets/work/portfolio/starbucks.png').default,

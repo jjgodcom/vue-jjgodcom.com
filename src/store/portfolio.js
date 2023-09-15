@@ -46,6 +46,17 @@ export default {
         ]
       },
       {
+        title:'shopping-shop',
+        link:'https://jjgodcom-shopping-shop-react.netlify.app/',
+        language:'HTML, SCSS, Javascript, React',
+        works:[],
+        description:'React 를 공부하면서 만들어본 상품을 소개하는 판매하는 사이트 입니다. 간단한 기능으로 물건 목록 출력 , 장바구니 담기 기능을 구현 했습니다.',
+        images:
+        [
+          require('assets/portfolio/jjgodcom-vue.png').default
+        ]
+      },
+      {
         title:'Starbucks',
         link:'https://jjgodcom-ftp.netlify.app/views/portfolio/starbucks/index.html',
         language:'HTML, CSS, Javascript',
