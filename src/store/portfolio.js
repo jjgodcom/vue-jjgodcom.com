@@ -13,10 +13,25 @@ export default {
           '디자인 작업 (100%)',
           '사용자 페이지(Vue.js) 개발 (100%)'
         ],
-        description:'Vue를 기반으로한 포트폴리오겸 세번째 블로그 입니다.',
+        description:'Vue를 기반으로 구현한 포트폴리오겸 세번째 블로그 입니다.',
         images:
         [
           require('assets/portfolio/jjgodcom-vue.png').default
+        ]
+      },
+      {
+        title:'jjgodcom.com-React',
+        link:'https://jjgodcom-react.netlify.app/',
+        language:'HTML, SCSS, Javascript, React',
+        works:
+        [
+          '디자인 작업 (100%)',
+          '사용자 페이지(React) 개발 (100%)'
+        ],
+        description:'React를 기반으로 구현한 포트폴리오 입니다.',
+        images:
+        [
+          require('assets/portfolio/jjgodcom-react.png').default
         ]
       },
       {

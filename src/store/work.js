@@ -172,6 +172,12 @@ export default {
       },
       {
         page:'portfolio',
+        title:'jjgodcom.com-React',
+        type:'Protfolio',
+        image:require('assets/work/portfolio/react.png').default,
+      },
+      {
+        page:'portfolio',
         title:'jjgodcom.com-ftp',
         type:'Protfolio',
         image:require('assets/work/portfolio/ftp.png').default,
